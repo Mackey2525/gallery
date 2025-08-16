@@ -4,116 +4,98 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>福岡ソフトバンクホークス 応援曲</title>
-<link rel="stylesheet" href="../css/style.css">
 <style>
-  #searchBar { width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ccc; }
-  #playersList { list-style: none; padding: 0; }
-  #playersList li { padding: 8px; background: #fff; margin-bottom: 5px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
-  #playersList li:hover { background: #f0f0f0; }
-  .playerGallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background:#f9f9f9;
+}
+h1 {
+  text-align:center;
+}
+.playerList {
+  display: flex;
+  flex-wrap: wrap; /* 横に並べて折り返す */
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.playerList a {
+  background:#fff;
+  padding: 8px 12px;
+  border-radius:6px;
+  text-decoration:none;
+  color:#000;
+  font-weight:bold;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  background:#fff;
+  padding:10px;
+  border-radius:6px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius:4px;
+  margin-bottom:8px;
+}
+
+.gallery-item iframe {
+  width: 100%;
+  height: 120px;
+  border:0;
+  border-radius:4px;
+}
 </style>
 </head>
 <body>
 
 <h1>福岡ソフトバンクホークス 応援曲</h1>
-<a href="../index.html">← トップページに戻る</a>
 
-<input type="text" id="searchBar" placeholder="選手名で検索…">
-
-<ul id="playersList"></ul>
-
-<!-- モーダル -->
-<div id="playerModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-    <h3 id="modalPlayerName"></h3>
-    <div class="playerGallery"></div>
-  </div>
+<!-- 選手一覧 -->
+<div class="playerList">
+  <a href="#player1">柳田悠岐</a>
+  <a href="#player2">甲斐拓也</a>
+  <a href="#player3">周東佑京</a>
+  <!-- 他の選手も追加 -->
 </div>
 
-<script>
-// 選手データ配列
-const players = [
-  {name:"田中太郎", images:["song1.png","song2.png"], videos:["dQw4w9WgXcQ","3JZ_D3ELwOQ"]},
-  {name:"鈴木一郎", images:["song3.png"], videos:["VIDEOID3"]},
-  {name:"佐藤健", images:["song4.png"], videos:["VIDEOID4"]}
-];
+<!-- 応援曲ギャラリー -->
+<div class="gallery">
+  <div class="gallery-item" id="player1">
+    <img src="images/players/yanagita_song.png" alt="柳田悠岐 応援曲">
+    <iframe src="https://www.youtube.com/embed/XXXXXXXXXXX" allowfullscreen></iframe>
+    <p>柳田悠岐 応援曲</p>
+  </div>
 
-const playersList = document.getElementById('playersList');
-const modal = document.getElementById('playerModal');
-const modalName = document.getElementById('modalPlayerName');
-const galleryDiv = document.querySelector('.playerGallery');
-const searchBar = document.getElementById('searchBar');
+  <div class="gallery-item" id="player2">
+    <img src="images/players/kai_song.png" alt="甲斐拓也 応援曲">
+    <iframe src="https://www.youtube.com/embed/YYYYYYYYYYY" allowfullscreen></iframe>
+    <p>甲斐拓也 応援曲</p>
+  </div>
 
-// 選手一覧表示
-function renderPlayers(list){
-  playersList.innerHTML = '';
-  list.forEach((player, idx) => {
-    const li = document.createElement('li');
-    li.textContent = player.name;
-    li.onclick = () => openModal(idx);
-    playersList.appendChild(li);
-  });
-}
+  <div class="gallery-item" id="player3">
+    <img src="images/players/shuto_song.png" alt="周東佑京 応援曲">
+    <iframe src="https://www.youtube.com/embed/ZZZZZZZZZZZ" allowfullscreen></iframe>
+    <p>周東佑京 応援曲</p>
+  </div>
 
-// 初期表示
-renderPlayers(players);
-
-// 検索機能
-searchBar.addEventListener('input', () => {
-  const keyword = searchBar.value.toLowerCase();
-  const filtered = players.filter(player => player.name.toLowerCase().includes(keyword));
-  renderPlayers(filtered);
-});
-
-// 選手モーダル
-function openModal(index) {
-  const player = players[index];
-  modalName.textContent = player.name;
-  
-  galleryDiv.innerHTML = '';
-  player.images.forEach((img, i) => {
-    const div = document.createElement('div');
-    div.className = 'item';
-    div.innerHTML = `<img src="../images/softbank/${img}" alt=""><p>曲${i+1}</p>`;
-    div.onclick = () => openVideo(player.videos[i]);
-    galleryDiv.appendChild(div);
-  });
-  
-  modal.style.display = 'flex';
-}
-
-function closeModal() {
-  modal.style.display = 'none';
-  galleryDiv.innerHTML = '';
-  closeVideo();
-}
-
-// 動画モーダル
-function openVideo(videoID) {
-  let videoModal = document.getElementById('videoModal');
-  if(!videoModal){
-    videoModal = document.createElement('div');
-    videoModal.id = 'videoModal';
-    videoModal.className = 'modal';
-    videoModal.innerHTML = `
-      <span class="close" onclick="closeVideo()">&times;</span>
-      <div class="modal-content">
-        <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
-      </div>`;
-    document.body.appendChild(videoModal);
-  }
-  document.getElementById('videoFrame').src = `https://www.youtube.com/embed/${videoID}`;
-  videoModal.style.display = 'flex';
-}
-
-function closeVideo() {
-  const videoFrame = document.getElementById('videoFrame');
-  if(videoFrame) videoFrame.src = '';
-  const videoModal = document.getElementById('videoModal');
-  if(videoModal) videoModal.style.display = 'none';
-}
-</script>
+  <!-- 他の選手も同様に追加 -->
+</div>
 
 </body>
 </html>
