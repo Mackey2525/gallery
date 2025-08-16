@@ -8,100 +8,111 @@
 body {
   font-family: sans-serif;
   padding: 20px;
-  background: #f9f9f9;
-  line-height: 1.6;
+  background:#f9f9f9;
+  max-width: 800px;
+  margin: auto;
 }
-h1 {
+h1, h2 {
   text-align: center;
-  margin-bottom: 20px;
 }
-h2 {
-  margin-top: 30px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 640px;
-  margin: 0 auto 30px auto;
-  aspect-ratio: 16 / 9;
-}
-.video-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 6px;
-}
-
-/* リンクをボタン風に */
-.song-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-  margin-top: 15px;
-}
-a.song-link {
-  display: block;
-  padding: 12px;
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  text-align: center;
-  transition: background 0.2s, transform 0.1s;
-}
-a.song-link:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-/* 戻るボタン */
-.back-link {
+.back-btn {
   display: inline-block;
-  margin-top: 30px;
-  padding: 10px 15px;
+  margin-bottom: 20px;
+  padding: 8px 12px;
   background: #eee;
   border-radius: 6px;
   text-decoration: none;
   color: #000;
+  font-weight: bold;
 }
-.back-link:hover {
+.back-btn:hover {
   background: #ddd;
+}
+
+/* YouTubeを横長比率で埋め込み */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin-bottom: 20px;
+}
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* リスト共通 */
+.song-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+/* 個人応援歌ボタン */
+.song-btn.player {
+  display: block;
+  padding: 10px 15px;
+  background: #e3f2fd; /* 青系 */
+  border-radius: 6px;
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+.song-btn.player:hover {
+  background: #bbdefb;
+}
+
+/* チーム応援歌ボタン */
+.song-btn.team {
+  display: block;
+  padding: 10px 15px;
+  background: #e8f5e9; /* 緑系 */
+  border-radius: 6px;
+  text-decoration: none;
+  color: #1b5e20;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+.song-btn.team:hover {
+  background: #c8e6c9;
 }
 </style>
 </head>
 <body>
 
+<a href="../index.html" class="back-btn">← トップページに戻る</a>
+
 <h1>読売ジャイアンツ</h1>
 
-<!-- YouTube 埋め込み -->
+<!-- YouTube埋め込み -->
 <div class="video-container">
-  <iframe src="https://www.youtube.com/embed/efD13CuOW2E" 
-          title="YouTube video player" 
-          allowfullscreen>
-  </iframe>
+  <iframe src="https://www.youtube.com/embed/efD13CuOW2E" allowfullscreen></iframe>
 </div>
 
 <!-- 個人応援歌 -->
 <h2>個人応援歌</h2>
-<div class="song-list">
-  <a href="../images/giants/player1.png" class="song-link" target="_blank">６　坂本勇人</a>
-  <a href="../images/giants/player2.png" class="song-link" target="_blank">25　岡本和真</a>
-  <a href="../images/giants/player3.png" class="song-link" target="_blank">８　丸　佳浩</a>
-</div>
+<ul class="song-list">
+  <li><a href="../images/giants/sakamoto.png" target="_blank" class="song-btn player">６　坂本　勇人</a></li>
+  <li><a href="../images/giants/okamoto.png" target="_blank" class="song-btn player">25　岡本　和真</a></li>
+  <li><a href="../images/giants/maru.png" target="_blank" class="song-btn player">８　丸　佳浩</a></li>
+</ul>
 
 <!-- チーム応援歌 -->
 <h2>チーム応援歌</h2>
-<div class="song-list">
-  <a href="../images/giants/team1.png" class="song-link" target="_blank">闘魂こめて</a>
-  <a href="../images/giants/team2.png" class="song-link" target="_blank">チャンステーマ1</a>
-</div>
-
-<a href="../index.html" class="back-link">← トップページへ戻る</a>
+<ul class="song-list">
+  <li><a href="../images/giants/team_song1.png" target="_blank" class="song-btn team">闘魂こめて</a></li>
+  <li><a href="../images/giants/team_song2.png" target="_blank" class="song-btn team">読売ジャイアンツの歌</a></li>
+</ul>
 
 </body>
 </html>
