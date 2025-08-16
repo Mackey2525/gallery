@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>読売ジャイアンツ</title>
+<title>読売ジャイアンツ 応援歌ページ</title>
 
 <!-- 共通CSS読み込み -->
 <link rel="stylesheet" href="../css/team-colors.css">
@@ -15,17 +15,22 @@ body {
   background: #f9f9f9;
   max-width: 800px;
   margin: auto;
+  color: #000; /* デフォルト文字色を黒に */
 }
+
 h1 {
   text-align: center;
-  color: var(--giants-color);
+  font-weight: bold;
 }
+
 h2 {
   margin-top: 30px;
   border-bottom: 2px solid var(--giants-color);
   padding-bottom: 5px;
-  color: var(--giants-color);
+  font-weight: bold;
 }
+
+/* YouTube埋め込み */
 iframe {
   display: block;
   margin: 20px auto;
@@ -34,50 +39,59 @@ iframe {
   width: 100%;
   border: none;
 }
+
+/* 応援歌ボタン */
 .song-button {
   display: inline-block;
   margin: 5px;
   padding: 10px 15px;
-  background: var(--giants-color);
-  color: var(--giants-text);
+  background: var(--giants-color); /* チームカラー */
+  color: var(--giants-text);       /* ボタン文字色 */
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   transition: 0.3s;
 }
+
 .song-button:hover {
   opacity: 0.85;
 }
+
+/* トップページに戻るボタン */
 .back-link {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 8px 12px;
   background: #ccc;
   border-radius: 6px;
   text-decoration: none;
   color: #000;
 }
+.back-link:hover {
+  opacity: 0.85;
+}
 </style>
 </head>
 <body>
 
-<h1>読売ジャイアンツ</h1>
+<h1>読売ジャイアンツ 応援歌</h1>
 
-<!-- YouTube埋め込み（ページ内に1つ） -->
+<!-- ページ上部にYouTube埋め込み -->
 <iframe src="https://www.youtube.com/embed/efD13CuOW2E" 
         title="YouTube video" allowfullscreen></iframe>
 
 <h2>個人応援歌</h2>
-<a href="../images/giants/sakamoto.png" class="song-button" target="_blank">６　坂本　勇人</a>
-<a href="../images/giants/okamoto.png" class="song-button" target="_blank">25　岡本　和真</a>
-<a href="../images/giants/maru.png" class="song-button" target="_blank">８　 丸　佳浩 </a>
+<a href="../images/giants/sakamoto.png" class="song-button" target="_blank">坂本勇人</a>
+<a href="../images/giants/okamoto.png" class="song-button" target="_blank">岡本和真</a>
+<a href="../images/giants/maru.png" class="song-button" target="_blank">丸佳浩</a>
 
 <h2>チーム応援歌</h2>
 <a href="../images/giants/team_song.png" class="song-button" target="_blank">闘魂こめて</a>
-<a href="../images/giants/team_song.png" class="song-button" target="_blank">VIVA GIANTS(得点時)</a>
-<a href="../images/giants/team_song.png" class="song-button" target="_blank">Ｇフレア</a>
 
-<a href="../index.html" class="back-link">← トップページに戻る</a>
+<!-- トップページに戻るボタン（中央揃え） -->
+<div style="text-align:center;">
+  <a href="../index.html" class="back-link">← トップページに戻る</a>
+</div>
 
 </body>
 </html>
