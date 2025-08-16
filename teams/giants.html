@@ -36,29 +36,24 @@ h1, h2 {
   border-radius: 6px;
 }
 
-/* ギャラリー */
-.section {
-  margin-bottom: 40px;
+/* 曲リンクリスト */
+.songList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.gallery-item {
+.songList a {
+  padding: 6px 10px;
   background: #fff;
-  padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
 }
 </style>
 </head>
@@ -68,30 +63,26 @@ h1, h2 {
 <a href="../index.html" class="backButton">トップページに戻る</a>
 
 <!-- ページ上部にYouTube埋め込み -->
-<iframe class="main-video" src="https://www.youtube.com/embed/MAINVIDEOID" allowfullscreen></iframe>
+<iframe class="main-video" src="https://www.youtube.com/watch?v=efD13CuOW2E" allowfullscreen></iframe>
 
 <!-- 個人応援歌セクション -->
 <div class="section">
   <h2>個人応援歌</h2>
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="../images/giants_player1.png" alt="選手1応援歌">
-    </div>
-    <div class="gallery-item">
-      <img src="../images/giants_player2.png" alt="選手2応援歌">
-    </div>
-    <!-- 他の個人応援歌も追加 -->
+  <div class="songList">
+    <a href="../images/giants_player1.png" target="_blank">選手1</a>
+    <a href="../images/giants_player2.png" target="_blank">選手2</a>
+    <a href="../images/giants_player3.png" target="_blank">選手3</a>
+    <!-- 必要に応じて追加 -->
   </div>
 </div>
 
 <!-- チーム応援歌セクション -->
 <div class="section">
   <h2>チーム応援歌</h2>
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="../images/giants_team.png" alt="チーム応援歌">
-    </div>
-    <!-- 他のチーム応援歌も追加可能 -->
+  <div class="songList">
+    <a href="../images/giants_team1.png" target="_blank">チーム曲1</a>
+    <a href="../images/giants_team2.png" target="_blank">チーム曲2</a>
+    <!-- 必要に応じて追加 -->
   </div>
 </div>
 
