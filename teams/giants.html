@@ -25,13 +25,13 @@ h1, h2 {
   border-radius: 4px;
 }
 
-/* レスポンシブYouTube埋め込み */
+/* レスポンシブYouTube埋め込み（16:9） */
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 640px;
+  max-width: 640px;       /* 最大幅を制限 */
   margin: 0 auto 30px auto;
-  padding-bottom: 56.25%; /* 16:9アスペクト比 */
+  padding-bottom: 56.25%; /* 16:9比率 */
   height: 0;
 }
 
@@ -71,7 +71,7 @@ h1, h2 {
 <h1>読売ジャイアンツ 応援曲ギャラリー</h1>
 <a href="../index.html" class="backButton">トップページに戻る</a>
 
-<!-- レスポンシブYouTube埋め込み -->
+<!-- ページ上部にYouTube埋め込み -->
 <div class="video-container">
   <iframe src="https://www.youtube.com/embed/efD13CuOW2E" allowfullscreen></iframe>
 </div>
