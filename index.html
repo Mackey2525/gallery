@@ -5,14 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>プロスピ応援曲置き場</title>
 <style>
-body { font-family: sans-serif; padding: 20px; background:#f9f9f9; }
-h1 { text-align:center; }
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background:#f9f9f9;
+}
+h1 {
+  text-align:center;
+}
 
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 横2列 */
   gap: 15px;
-  max-width: 800px; /* 幅を広げて改行防止 */
+  max-width: 800px; 
   margin: 0 auto;
 }
 
@@ -27,15 +33,23 @@ h1 { text-align:center; }
   color: #000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   font-weight: bold;
-  white-space: nowrap;       /* 改行防止 */
-  overflow: hidden;          /* はみ出た部分を隠す */
-  text-overflow: ellipsis;   /* 長すぎる場合は…表示 */
+  white-space: nowrap;   /* PCでは改行を防ぐ */
 }
 
 .teamLink img {
-  height: 2em;    /* 文字の2倍の高さ */
+  height: 2em;   /* 文字の2倍の高さ */
   width: auto;
   flex-shrink: 0; /* 画像サイズを固定 */
+}
+
+/* スマホ用：画面幅が600px以下なら改行OK */
+@media (max-width: 600px) {
+  .teamGrid {
+    grid-template-columns: 1fr; /* 横1列に切替 */
+  }
+  .teamLink {
+    white-space: normal; /* 改行を許可 */
+  }
 }
 </style>
 </head>
