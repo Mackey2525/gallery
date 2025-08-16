@@ -14,7 +14,7 @@
 
   /* 横浜DeNAベイスターズ */
   --baystars-color: #003F8E; /* 紺 */
-  --baystars-text: #ffffff;  /* 白文字 */
+  --baystars-text: #0091E1;  /* 水色字 */
 
   /* 中日ドラゴンズ */
   --dragons-color: #002569;  /* 青 */
@@ -52,5 +52,6 @@
   --others-color: #888888;   /* グレー */
   --others-text: #000000;    /* 黒文字 */
 }
+
 
 
