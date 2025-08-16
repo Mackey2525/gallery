@@ -1,4 +1,4 @@
-/* team-colors.css */
+　/* team-colors.css */
 :root {
   /* 読売ジャイアンツ */
   --giants-color: #F97709;   /* オレンジ */
@@ -21,8 +21,8 @@
   --dragons-text: #ffffff;   /* 白文字 */
 
   /* 東京ヤクルトスワローズ */
-  --swallows-color: #006934; /* 緑 */
-  --swallows-text: #ffffff;  /* 白文字 */
+  --swallows-color: #003D98; /* 青 */
+  --swallows-text: #E50023;  /* 赤文字 */
 
   /* 福岡ソフトバンクホークス */
   --hawks-color: #FCC700;    /* 黄 */
@@ -52,6 +52,7 @@
   --others-color: #888888;   /* グレー */
   --others-text: #000000;    /* 黒文字 */
 }
+
 
 
 
