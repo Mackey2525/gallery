@@ -138,5 +138,22 @@ iframe {
   <a href="../index.html" class="back-link">← トップページに戻る</a>
 </div>
 
+<script>
+// CountAPIを使ったアクセスカウンター
+// 「my-giants-site」をあなた専用の一意なIDに変更してください
+const counterNamespace = "prosupi-counts";
+const counterKey = "my-giants-site";
+
+fetch(`https://api.countapi.xyz/hit/${counterNamespace}/${counterKey}`)
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('visit-count').textContent = `総訪問数: ${data.value}`;
+  })
+  .catch(error => {
+    console.error("カウンター取得エラー:", error);
+    document.getElementById('visit-count').textContent = "総訪問数: 取得不可";
+  });
+</script>
+
 </body>
 </html>
