@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>応援曲ギャラリー</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロ野球応援曲ギャラリー</title>
+<style>
+body { font-family: sans-serif; padding: 20px; background:#f9f9f9; }
+h1 { text-align:center; }
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 横2列 */
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.teamLink {
+  display: flex;
+  align-items: center; /* 画像と文字を縦中央揃え */
+  padding: 10px 15px;
+  background: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+.teamLink img {
+  height: 1em; /* 文字と同じ高さに調整 */
+  width: auto;
+  margin-right: 8px;
+}
+</style>
 </head>
 <body>
 
-<h1>応援曲ギャラリー</h1>
-<ul>
-  <li><a href="teams/softbank.html">福岡ソフトバンクホークス</a></li>
-  <li><a href="teams/giants.html">読売ジャイアンツ</a></li>
-  <li><a href="teams/dragons.html">中日ドラゴンズ</a></li>
-</ul>
+<h1>プロ野球応援曲ギャラリー</h1>
+
+<div class="teamGrid">
+  <a href="teams/softbank.html" class="teamLink">
+    <img src="images/logos/softbank.png" alt="ソフトバンク">福岡ソフトバンクホークス
+  </a>
+  <a href="teams/yakult.html" class="teamLink">
+    <img src="images/logos/yakult.png" alt="ヤクルト">東京ヤクルトスワローズ
+  </a>
+  <a href="teams/giants.html" class="teamLink">
+    <img src="images/logos/giants.png" alt="巨人">読売ジャイアンツ
+  </a>
+  <a href="teams/tigers.html" class="teamLink">
+    <img src="images/logos/tigers.png" alt="阪神">阪神タイガース
+  </a>
+  <!-- 他のチームも同様に追加 -->
+</div>
 
 </body>
 </html>
