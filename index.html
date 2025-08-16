@@ -36,11 +36,34 @@ h1 {
   white-space: normal;   /* 文字は必要に応じて折り返し */
 }
 
+/* ロゴ画像の共通設定 */
 .teamLink img {
-  height: 2em;      /* 高さは文字の2倍 */
-  width: 3em;       /* 横幅を統一 */
+  height: 2em;       /* 高さは文字の2倍 */
+  width: 3em;        /* 横幅を統一 */
   object-fit: contain; /* 縦横比を維持 */
   flex-shrink: 0;
+
+  /* 右クリック・ドラッグ禁止 */
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* 透かし風効果（薄く白線を重ねる例） */
+.teamLink img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.2),
+    rgba(255,255,255,0.2) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
 }
 </style>
 </head>
@@ -50,46 +73,45 @@ h1 {
 
 <div class="teamGrid">
   <a href="teams/giants.html" class="teamLink">
-    <img src="images/logos/giants.png" alt="巨人">読売ジャイアンツ
+    <img src="images/logos/giants.png" alt="巨人" oncontextmenu="return false;">読売ジャイアンツ
   </a>
   <a href="teams/softbank.html" class="teamLink">
-    <img src="images/logos/softbank.png" alt="ソフトバンク">福岡ソフトバンクホークス
+    <img src="images/logos/softbank.png" alt="ソフトバンク" oncontextmenu="return false;">福岡ソフトバンクホークス
   </a>
   <a href="teams/tigers.html" class="teamLink">
-    <img src="images/logos/tigers.png" alt="阪神">阪神タイガース
+    <img src="images/logos/tigers.png" alt="阪神" oncontextmenu="return false;">阪神タイガース
   </a>
   <a href="teams/fighters.html" class="teamLink">
-    <img src="images/logos/fighters.png" alt="日本ハム">北海道日本ハムファイターズ
+    <img src="images/logos/fighters.png" alt="日本ハム" oncontextmenu="return false;">北海道日本ハムファイターズ
   </a>
   <a href="teams/baystars.html" class="teamLink">
-    <img src="images/logos/baystars.png" alt="横浜">横浜DeNAベイスターズ
+    <img src="images/logos/baystars.png" alt="横浜" oncontextmenu="return false;">横浜DeNAベイスターズ
   </a>
   <a href="teams/marines.html" class="teamLink">
-    <img src="images/logos/marines.png" alt="ロッテ">千葉ロッテマリーンズ
+    <img src="images/logos/marines.png" alt="ロッテ" oncontextmenu="return false;">千葉ロッテマリーンズ
   </a>
   <a href="teams/carp.html" class="teamLink">
-    <img src="images/logos/carp.png" alt="広島">広島東洋カープ
+    <img src="images/logos/carp.png" alt="広島" oncontextmenu="return false;">広島東洋カープ
   </a>
   <a href="teams/eagles.html" class="teamLink">
-    <img src="images/logos/eagles.png" alt="楽天">東北楽天ゴールデンイーグルス
+    <img src="images/logos/eagles.png" alt="楽天" oncontextmenu="return false;">東北楽天ゴールデンイーグルス
   </a>
   <a href="teams/yakult.html" class="teamLink">
-    <img src="images/logos/yakult.png" alt="ヤクルト">東京ヤクルトスワローズ
+    <img src="images/logos/yakult.png" alt="ヤクルト" oncontextmenu="return false;">東京ヤクルトスワローズ
   </a>
   <a href="teams/buffaloes.html" class="teamLink">
-    <img src="images/logos/buffaloes.png" alt="オリックス">オリックス・バファローズ
+    <img src="images/logos/buffaloes.png" alt="オリックス" oncontextmenu="return false;">オリックス・バファローズ
   </a>
   <a href="teams/dragons.html" class="teamLink">
-    <img src="images/logos/dragons.png" alt="中日">中日ドラゴンズ
+    <img src="images/logos/dragons.png" alt="中日" oncontextmenu="return false;">中日ドラゴンズ
   </a>
   <a href="teams/lions.html" class="teamLink">
-    <img src="images/logos/lions.png" alt="西武">埼玉西武ライオンズ
+    <img src="images/logos/lions.png" alt="西武" oncontextmenu="return false;">埼玉西武ライオンズ
   </a>
   <a href="teams/others.html" class="teamLink">
-    <img src="images/logos/others.png" alt="その他">その他
+    <img src="images/logos/others.png" alt="その他" oncontextmenu="return false;">その他
   </a>
 </div>
 
 </body>
 </html>
-
