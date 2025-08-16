@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>読売ジャイアンツ - 応援曲</title>
+<title>読売ジャイアンツ</title>
 <style>
 body {
   font-family: sans-serif;
@@ -24,9 +24,9 @@ h2 {
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 640px;   /* PCでも幅が広くなりすぎない */
+  max-width: 640px;
   margin: 0 auto 30px auto;
-  aspect-ratio: 16 / 9; /* 常に16:9を維持 */
+  aspect-ratio: 16 / 9;
 }
 .video-container iframe {
   width: 100%;
@@ -35,21 +35,28 @@ h2 {
   border-radius: 6px;
 }
 
-/* リストのスタイル */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-li {
-  margin: 8px 0;
+/* リンクをボタン風に */
+.song-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
 }
 a.song-link {
+  display: block;
+  padding: 12px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-decoration: none;
-  color: #0066cc;
+  color: #000;
   font-weight: bold;
+  text-align: center;
+  transition: background 0.2s, transform 0.1s;
 }
 a.song-link:hover {
-  text-decoration: underline;
+  background: #f0f0f0;
+  transform: translateY(-2px);
 }
 
 /* 戻るボタン */
@@ -69,7 +76,7 @@ a.song-link:hover {
 </head>
 <body>
 
-<h1>読売ジャイアンツ 応援曲</h1>
+<h1>読売ジャイアンツ</h1>
 
 <!-- YouTube 埋め込み -->
 <div class="video-container">
@@ -81,18 +88,18 @@ a.song-link:hover {
 
 <!-- 個人応援歌 -->
 <h2>個人応援歌</h2>
-<ul>
-  <li><a href="../images/giants/player1.png" class="song-link" target="_blank">坂本勇人</a></li>
-  <li><a href="../images/giants/player2.png" class="song-link" target="_blank">岡本和真</a></li>
-  <li><a href="../images/giants/player3.png" class="song-link" target="_blank">丸佳浩</a></li>
-</ul>
+<div class="song-list">
+  <a href="../images/giants/player1.png" class="song-link" target="_blank">６　坂本勇人</a>
+  <a href="../images/giants/player2.png" class="song-link" target="_blank">25　岡本和真</a>
+  <a href="../images/giants/player3.png" class="song-link" target="_blank">８　丸　佳浩</a>
+</div>
 
 <!-- チーム応援歌 -->
 <h2>チーム応援歌</h2>
-<ul>
-  <li><a href="../images/giants/team1.png" class="song-link" target="_blank">闘魂こめて</a></li>
-  <li><a href="../images/giants/team2.png" class="song-link" target="_blank">チャンステーマ1</a></li>
-</ul>
+<div class="song-list">
+  <a href="../images/giants/team1.png" class="song-link" target="_blank">闘魂こめて</a>
+  <a href="../images/giants/team2.png" class="song-link" target="_blank">チャンステーマ1</a>
+</div>
 
 <a href="../index.html" class="back-link">← トップページへ戻る</a>
 
