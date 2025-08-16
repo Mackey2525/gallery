@@ -1,2 +1,2 @@
-# -
-Gallery of baseball cheering songs with images and YouTube links.
+このページは GitHub Pages を使って作ったホームページです。
+プロ野球スピリッツや実況パワフルプロ野球で作成した応援曲を画像集です。
