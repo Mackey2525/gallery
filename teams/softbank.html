@@ -3,162 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>福岡ソフトバンクホークス 応援曲</title>
+<title>福岡ソフトバンクホークス</title>
+
+<!-- 共通CSS読み込み -->
+<link rel="stylesheet" href="../css/team-colors.css">
+
 <style>
 body {
   font-family: sans-serif;
   padding: 20px;
-  background:#f9f9f9;
+  background: #f9f9f9;
+  max-width: 800px;
+  margin: auto;
+  color: #000; /* デフォルト文字色は黒 */
 }
+
 h1 {
-  text-align:center;
-  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
 }
 
-/* トップに戻るボタン */
-.backButton {
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid var(--hawks-color);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* YouTube埋め込み */
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: none;
+}
+
+/* 応援歌ボタン（固定サイズ版） */
+.song-button {
   display: inline-block;
-  margin-bottom: 15px;
-  padding: 8px 15px;
-  background:#007bff;
-  color:#fff;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 2px 4px rgba(0,0,0,0.2);
+  margin: 5px;
+  padding: 10px 15px;
+  min-width: 140px;   /* 横幅を140pxに変更 */
+  text-align: center;
+  background: var(--hawks-color); /* チームカラー */
+  color: var(--hawks-text);       /* ボタン文字色 */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* 選手検索ボックス */
-#playerSearch {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border-radius:6px;
-  border:1px solid #ccc;
+.song-button:hover {
+  opacity: 0.85;
 }
 
-/* 選手一覧 */
-.playerList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.playerList a {
-  background:#fff;
+/* トップページに戻るボタン */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
   padding: 8px 12px;
-  border-radius:6px;
-  text-decoration:none;
-  color:#000;
-  font-weight:bold;
-  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  background: #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
 }
-
-/* 応援曲ギャラリー */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.gallery-item {
-  background:#fff;
-  padding:10px;
-  border-radius:6px;
-  box-shadow:0 2px 4px rgba(0,0,0,0.1);
-  text-align:center;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  border-radius:4px;
-  margin-bottom:8px;
-}
-
-.gallery-item iframe {
-  width: 100%;
-  height: 120px;
-  border:0;
-  border-radius:4px;
+.back-link:hover {
+  opacity: 0.85;
 }
 </style>
 </head>
 <body>
 
-<h1>福岡ソフトバンクホークス 応援曲</h1>
+<h1>福岡ソフトバンクホークス</h1>
 
-<!-- トップページに戻るボタン -->
-<a href="../index.html" class="backButton">トップページに戻る</a>
+<!-- ページ上部にYouTube埋め込み -->
+<iframe src="https://www.youtube.com/embed/efD13CuOW2E" 
+        title="YouTube video" allowfullscreen></iframe>
 
-<!-- 選手検索ボックス -->
-<input type="text" id="playerSearch" placeholder="選手名で検索">
+<h2>個人応援歌</h2>
+<a href="../images/giants/sakamoto.png" class="song-button" target="_blank">６　坂本　勇人</a>
+<a href="../images/giants/okamoto.png" class="song-button" target="_blank">25　岡本　和真</a>
+<a href="../images/giants/maru.png" class="song-button" target="_blank">８　丸　佳浩　</a>
 
-<!-- 選手一覧 -->
-<div class="playerList" id="playerList">
-  <a href="#player1">柳田悠岐</a>
-  <a href="#player2">甲斐拓也</a>
-  <a href="#player3">周東佑京</a>
-  <a href="#player4">栗原陵矢</a>
-  <a href="#player5">デスパイネ</a>
-  <a href="#player6">牧原大成</a>
-  <a href="#player7">森唯斗</a>
-  <a href="#player8">上林誠知</a>
-  <a href="#player9">今宮健太</a>
-  <a href="#player10">松田宣浩</a>
-  <!-- 他の選手も追加 -->
+<h2>チーム応援歌</h2>
+<a href="../images/giants/team_song.png" class="song-button" target="_blank">闘魂こめて</a>
+<a href="../images/giants/team_song.png" class="song-button" target="_blank">VIVA  GIANTS(得点時)</a>
+
+<h2>一括ダウンロード</h2>
+<a href="../images/giants/giants_all_songs.zip" class="song-button" target="_blank">一括ダウンロード</a>
+
+<!-- トップページに戻るボタン（中央揃え） -->
+<div style="text-align:center;">
+  <a href="../index.html" class="back-link">← トップページに戻る</a>
 </div>
-
-<!-- 応援曲ギャラリー -->
-<div class="gallery">
-  <div class="gallery-item" id="player1">
-    <img src="images/players/yanagita_song.png" alt="柳田悠岐 応援曲">
-    <iframe src="https://www.youtube.com/embed/G5JSVEcprOI?t=226" allowfullscreen></iframe>
-    <p>柳田悠岐 応援曲</p>
-  </div>
-
-  <div class="gallery-item" id="player2">
-    <img src="images/players/kai_song.png" alt="甲斐拓也 応援曲">
-    <iframe src="https://www.youtube.com/embed/YYYYYYYYYYY" allowfullscreen></iframe>
-    <p>甲斐拓也 応援曲</p>
-  </div>
-
-  <div class="gallery-item" id="player3">
-    <img src="images/players/shuto_song.png" alt="周東佑京 応援曲">
-    <iframe src="https://www.youtube.com/embed/ZZZZZZZZZZZ" allowfullscreen></iframe>
-    <p>周東佑京 応援曲</p>
-  </div>
-
-  <!-- 他の選手も同様に追加 -->
-</div>
-
-<!-- ページ下部にもトップページに戻るボタン -->
-<a href="../index.html" class="backButton">トップページに戻る</a>
-
-<script>
-// 検索機能
-const searchInput = document.getElementById("playerSearch");
-const playerList = document.getElementById("playerList");
-const players = playerList.getElementsByTagName("a");
-
-searchInput.addEventListener("input", function() {
-  const filter = searchInput.value.trim();
-  for (let i = 0; i < players.length; i++) {
-    const name = players[i].textContent;
-    if (name.includes(filter)) {
-      players[i].style.display = "inline-block";
-    } else {
-      players[i].style.display = "none";
-    }
-  }
-});
-</script>
 
 </body>
 </html>
-
-
