@@ -15,7 +15,7 @@ body {
   background: #f9f9f9;
   max-width: 800px;
   margin: auto;
-  color: #000; /* デフォルト文字色を黒に */
+  color: #000; /* デフォルト文字色は黒 */
 }
 
 h1 {
@@ -40,11 +40,13 @@ iframe {
   border: none;
 }
 
-/* 応援歌ボタン */
+/* 応援歌ボタン（固定サイズ版） */
 .song-button {
   display: inline-block;
   margin: 5px;
   padding: 10px 15px;
+  min-width: 120px;   /* 横幅固定 */
+  text-align: center;
   background: var(--giants-color); /* チームカラー */
   color: var(--giants-text);       /* ボタン文字色 */
   text-decoration: none;
