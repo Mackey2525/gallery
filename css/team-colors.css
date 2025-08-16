@@ -33,7 +33,7 @@
   --fighters-text: #ffffff;  /* 白文字 */
 
   /* 千葉ロッテマリーンズ */
-  --marines-color: #F2E329;  /* 黒色 */
+  --marines-color: #000000;  /* 黒色 */
   --marines-text: #C0C0C0;   /* 灰文字 */
 
   /* 埼玉西武ライオンズ */
@@ -52,4 +52,5 @@
   --others-color: #888888;   /* グレー */
   --others-text: #000000;    /* 黒文字 */
 }
+
 
