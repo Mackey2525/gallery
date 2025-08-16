@@ -1,0 +1,54 @@
+/* team-colors.css */
+:root {
+  /* 読売ジャイアンツ */
+  --giants-color: #FF6600;
+  --giants-text: #ffffff;
+
+  /* 阪神タイガース */
+  --tigers-color: #FFD600;
+  --tigers-text: #000000;
+
+  /* 広島東洋カープ */
+  --carp-color: #E60012;
+  --carp-text: #ffffff;
+
+  /* 横浜DeNAベイスターズ */
+  --baystars-color: #004C97;
+  --baystars-text: #ffffff;
+
+  /* 中日ドラゴンズ */
+  --dragons-color: #004B8D;
+  --dragons-text: #ffffff;
+
+  /* 東京ヤクルトスワローズ */
+  --swallows-color: #006934;
+  --swallows-text: #ffffff;
+
+  /* 福岡ソフトバンクホークス */
+  --hawks-color: #000000;
+  --hawks-text: #ffffff;
+
+  /* 北海道日本ハムファイターズ */
+  --fighters-color: #005BAC;
+  --fighters-text: #ffffff;
+
+  /* 千葉ロッテマリーンズ */
+  --marines-color: #000000;
+  --marines-text: #ffffff;
+
+  /* 埼玉西武ライオンズ */
+  --lions-color: #004098;
+  --lions-text: #ffffff;
+
+  /* オリックス・バファローズ */
+  --buffaloes-color: #12284B;
+  --buffaloes-text: #ffffff;
+
+  /* 東北楽天ゴールデンイーグルス */
+  --eagles-color: #8B0000;
+  --eagles-text: #ffffff;
+
+  /* その他 */
+  --others-color: #888888;
+  --others-text: #000000;
+}
