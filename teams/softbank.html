@@ -12,10 +12,35 @@ body {
 }
 h1 {
   text-align:center;
+  margin-bottom: 15px;
 }
+
+/* トップに戻るボタン */
+.backButton {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  background:#007bff;
+  color:#fff;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 選手検索ボックス */
+#playerSearch {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* 選手一覧 */
 .playerList {
   display: flex;
-  flex-wrap: wrap; /* 横に並べて折り返す */
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
   margin-bottom: 20px;
@@ -31,6 +56,7 @@ h1 {
   box-shadow:0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* 応援曲ギャラリー */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -66,11 +92,24 @@ h1 {
 
 <h1>福岡ソフトバンクホークス 応援曲</h1>
 
+<!-- トップページに戻るボタン -->
+<a href="../index.html" class="backButton">トップページに戻る</a>
+
+<!-- 選手検索ボックス -->
+<input type="text" id="playerSearch" placeholder="選手名で検索">
+
 <!-- 選手一覧 -->
-<div class="playerList">
+<div class="playerList" id="playerList">
   <a href="#player1">柳田悠岐</a>
   <a href="#player2">甲斐拓也</a>
   <a href="#player3">周東佑京</a>
+  <a href="#player4">栗原陵矢</a>
+  <a href="#player5">デスパイネ</a>
+  <a href="#player6">牧原大成</a>
+  <a href="#player7">森唯斗</a>
+  <a href="#player8">上林誠知</a>
+  <a href="#player9">今宮健太</a>
+  <a href="#player10">松田宣浩</a>
   <!-- 他の選手も追加 -->
 </div>
 
@@ -96,6 +135,28 @@ h1 {
 
   <!-- 他の選手も同様に追加 -->
 </div>
+
+<!-- ページ下部にもトップページに戻るボタン -->
+<a href="../index.html" class="backButton">トップページに戻る</a>
+
+<script>
+// 検索機能
+const searchInput = document.getElementById("playerSearch");
+const playerList = document.getElementById("playerList");
+const players = playerList.getElementsByTagName("a");
+
+searchInput.addEventListener("input", function() {
+  const filter = searchInput.value.trim();
+  for (let i = 0; i < players.length; i++) {
+    const name = players[i].textContent;
+    if (name.includes(filter)) {
+      players[i].style.display = "inline-block";
+    } else {
+      players[i].style.display = "none";
+    }
+  }
+});
+</script>
 
 </body>
 </html>
