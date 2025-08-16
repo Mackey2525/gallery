@@ -12,13 +12,14 @@ h1 { text-align:center; }
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 横2列 */
   gap: 15px;
-  max-width: 600px;
+  max-width: 800px; /* 幅を広げて改行防止 */
   margin: 0 auto;
 }
 
 .teamLink {
   display: flex;
   align-items: center; /* 画像と文字を縦中央揃え */
+  gap: 10px;
   padding: 10px 15px;
   background: #fff;
   border-radius: 6px;
@@ -26,12 +27,15 @@ h1 { text-align:center; }
   color: #000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   font-weight: bold;
+  white-space: nowrap;       /* 改行防止 */
+  overflow: hidden;          /* はみ出た部分を隠す */
+  text-overflow: ellipsis;   /* 長すぎる場合は…表示 */
 }
 
 .teamLink img {
-  height: 2em; 
+  height: 2em;    /* 文字の2倍の高さ */
   width: auto;
-  margin-right: 8px;
+  flex-shrink: 0; /* 画像サイズを固定 */
 }
 </style>
 </head>
@@ -40,51 +44,46 @@ h1 { text-align:center; }
 <h1>プロスピ応援曲置き場</h1>
 
 <div class="teamGrid">
- <a href="teams/giants.html" class="teamLink">
+  <a href="teams/giants.html" class="teamLink">
     <img src="images/logos/giants.png" alt="巨人">読売ジャイアンツ
   </a>
   <a href="teams/softbank.html" class="teamLink">
     <img src="images/logos/softbank.png" alt="ソフトバンク">福岡ソフトバンクホークス
-  </a>  
+  </a>
   <a href="teams/tigers.html" class="teamLink">
     <img src="images/logos/tigers.png" alt="阪神">阪神タイガース
   </a>
-   <a href="teams/fighters.html" class="teamLink">
+  <a href="teams/fighters.html" class="teamLink">
     <img src="images/logos/fighters.png" alt="日本ハム">北海道日本ハムファイターズ
   </a>
-   <a href="teams/baystars.html" class="teamLink">
+  <a href="teams/baystars.html" class="teamLink">
     <img src="images/logos/baystars.png" alt="横浜">横浜DeNAベイスターズ
   </a>
-   <a href="teams/marines.html" class="teamLink">
+  <a href="teams/marines.html" class="teamLink">
     <img src="images/logos/marines.png" alt="ロッテ">千葉ロッテマリーンズ
   </a>
-   <a href="teams/carp.html" class="teamLink">
+  <a href="teams/carp.html" class="teamLink">
     <img src="images/logos/carp.png" alt="広島">広島東洋カープ
   </a>
-   <a href="teams/eagles.html" class="teamLink">
+  <a href="teams/eagles.html" class="teamLink">
     <img src="images/logos/eagles.png" alt="楽天">東北楽天ゴールデンイーグルス
   </a>
-   <a href="teams/yakult.html" class="teamLink">
+  <a href="teams/yakult.html" class="teamLink">
     <img src="images/logos/yakult.png" alt="ヤクルト">東京ヤクルトスワローズ
   </a>
-   <a href="teams/buffaloes.html" class="teamLink">
+  <a href="teams/buffaloes.html" class="teamLink">
     <img src="images/logos/buffaloes.png" alt="オリックス">オリックス・バファローズ
   </a>
-   <a href="teams/dragons.html" class="teamLink">
+  <a href="teams/dragons.html" class="teamLink">
     <img src="images/logos/dragons.png" alt="中日">中日ドラゴンズ
   </a>
-   <a href="teams/lions.html" class="teamLink">
+  <a href="teams/lions.html" class="teamLink">
     <img src="images/logos/lions.png" alt="西武">埼玉西武ライオンズ
   </a>
-   <a href="teams/others.html" class="teamLink">
+  <a href="teams/others.html" class="teamLink">
     <img src="images/logos/others.png" alt="その他">その他
   </a>
-  <!-- 他のチームも同様に追加 -->
 </div>
 
 </body>
 </html>
-
-
-
-
