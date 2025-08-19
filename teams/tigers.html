@@ -179,9 +179,9 @@ iframe {
 <!-- モーダル本体 -->
 <div id="imageModal" class="modal">
   <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
   <img class="modal-content" id="modalImg">
-  <div class="title" id="modalTitle"></div>
-  <div class="hint">右クリックで保存できます</div>
+  <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
 </div>
 
 <script>
@@ -209,3 +209,4 @@ modal.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; }
 
 </body>
 </html>
+
