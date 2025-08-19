@@ -7,9 +7,7 @@
 
 <!-- 共通CSS読み込み -->
 <link rel="stylesheet" href="../css/team-colors.css">
-
 <link rel="icon" href="../images/logos/fighters.png" type="image/x-icon">
-
 
 <style>
 body {
@@ -18,7 +16,7 @@ body {
   background: #f9f9f9;
   max-width: 800px;
   margin: auto;
-  color: #000; /* デフォルト文字色は黒 */
+  color: #000;
 }
 
 h1 {
@@ -26,6 +24,14 @@ h1 {
   font-weight: bold;
 }
 
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
 h2 {
   margin-top: 30px;
   border-bottom: 2px solid var(--fighters-color);
@@ -33,7 +39,6 @@ h2 {
   font-weight: bold;
 }
 
-/* YouTube埋め込み */
 iframe {
   display: block;
   margin: 20px auto;
@@ -43,26 +48,24 @@ iframe {
   border: none;
 }
 
-/* 応援歌ボタン（固定サイズ版） */
-.song-button {
+.song-button, .download-button {
   display: inline-block;
   margin: 5px;
   padding: 10px 15px;
-  min-width: 140px;   /* 横幅を140pxに変更 */
+  min-width: 140px;
   text-align: center;
-  background: var(--fighters-color); /* チームカラー */
-  color: var(--fighters-text);       /* ボタン文字色 */
+  background: var(--fighters-color);
+  color: var(--fighters-text);
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.song-button:hover {
+.song-button:hover, .download-button:hover {
   opacity: 0.85;
 }
 
-/* トップページに戻るボタン */
 .back-link {
   display: inline-block;
   margin-top: 40px;
@@ -75,67 +78,133 @@ iframe {
 .back-link:hover {
   opacity: 0.85;
 }
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
 </style>
 </head>
 <body>
 
 <h1>北海道日本ハムファイターズ</h1>
 
-<!-- ページ上部にYouTube埋め込み -->
-<iframe src="https://www.youtube.com/embed/rdGFWRYs0ro" 
-        title="YouTube video" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/rdGFWRYs0ro" title="YouTube video" allowfullscreen></iframe>
 
 <h2>個人応援歌</h2>
-<a href="../images/fighters/F02_マルティネス.png" class="song-button" target="_blank">２　マルティネス</a>
-<a href="../images/fighters/F04_上川畑大悟.png" class="song-button" target="_blank">４　上川畑大悟</a>
-<a href="../images/fighters/F05_野村佑希.png" class="song-button" target="_blank">５　野村　佑希</a>
-<a href="../images/fighters/F07_松本剛.png" class="song-button" target="_blank">７　松本　剛　</a>
-<a href="../images/fighters/F08_淺間大基.png" class="song-button" target="_blank">８　淺間　大基</a>
-<a href="../images/fighters/F09_中島卓也.png" class="song-button" target="_blank">９　中島　卓也</a>
-<a href="../images/fighters/F10_清水優心.png" class="song-button" target="_blank">10　清水　優心</a>
-<a href="../images/fighters/F21_清宮幸太郎.png" class="song-button" target="_blank">21　清宮幸太郎</a>
-<a href="../images/fighters/F23_伏見寅威.png" class="song-button" target="_blank">23　伏見　寅威</a>
-<a href="../images/fighters/F30_郡司裕也.png" class="song-button" target="_blank">30　郡司　裕也</a>
-<a href="../images/fighters/F38_石井一成.png" class="song-button" target="_blank">38　石井　一成</a>
-<a href="../images/fighters/F43_水野達稀.png" class="song-button" target="_blank">43　水野　達稀</a>
-<a href="../images/fighters/F50_五十幡亮汰.png" class="song-button" target="_blank">50　五十幡亮汰</a>
-<a href="../images/fighters/F53_水谷瞬.png" class="song-button" target="_blank">53　水谷　瞬　</a>
-<a href="../images/fighters/F56_細川凌平.png" class="song-button" target="_blank">56　細川　凌平</a>
-<a href="../images/fighters/F58_奈良間大己.png" class="song-button" target="_blank">58　奈良間大己</a>
-<a href="../images/fighters/F61_今川優馬.png" class="song-button" target="_blank">61　今川　優馬</a>
-<a href="../images/fighters/F64_田宮裕涼.png" class="song-button" target="_blank">64　田宮　裕涼</a>
-<a href="../images/fighters/F66_万波中正.png" class="song-button" target="_blank">66　万波　中正</a>
-<a href="../images/fighters/F99_レイエス.png" class="song-button" target="_blank">99　レイエス　</a>
-<a href="../images/fighters/F17_伊藤大海.png" class="song-button" target="_blank">17　伊藤　大海</a>
-<a href="../images/fighters/F18_山﨑福也.png" class="song-button" target="_blank">18　山﨑　福也</a>
-<a href="../images/fighters/F991_メインテーマ１-代打のテーマ-.png" class="song-button" target="_blank">代打のテーマ</a>
-<a href="../images/fighters/F992_メインテーマ２-奇数背番号選手-.png" class="song-button" target="_blank">奇数背番号選手</a>
-<a href="../images/fighters/F993_メインテーマ３-偶数背番号選手-.png" class="song-button" target="_blank">偶数背番号選手</a>
-<a href="../images/fighters/F994_投手用テーマ.png" class="song-button" target="_blank">投手用テーマ</a>
+<a href="../images/fighters/F02_マルティネス.png" class="song-button">２　マルティネス</a>
+<a href="../images/fighters/F04_上川畑大悟.png" class="song-button">４　上川畑大悟</a>
+<a href="../images/fighters/F05_野村佑希.png" class="song-button">５　野村　佑希</a>
+<a href="../images/fighters/F07_松本剛.png" class="song-button">７　松本　剛　</a>
+<a href="../images/fighters/F08_淺間大基.png" class="song-button">８　淺間　大基</a>
+<a href="../images/fighters/F09_中島卓也.png" class="song-button">９　中島　卓也</a>
+<a href="../images/fighters/F10_清水優心.png" class="song-button">10　清水　優心</a>
+<a href="../images/fighters/F21_清宮幸太郎.png" class="song-button">21　清宮幸太郎</a>
+<a href="../images/fighters/F23_伏見寅威.png" class="song-button">23　伏見　寅威</a>
+<a href="../images/fighters/F30_郡司裕也.png" class="song-button">30　郡司　裕也</a>
+<a href="../images/fighters/F38_石井一成.png" class="song-button">38　石井　一成</a>
+<a href="../images/fighters/F43_水野達稀.png" class="song-button">43　水野　達稀</a>
+<a href="../images/fighters/F50_五十幡亮汰.png" class="song-button">50　五十幡亮汰</a>
+<a href="../images/fighters/F53_水谷瞬.png" class="song-button">53　水谷　瞬　</a>
+<a href="../images/fighters/F56_細川凌平.png" class="song-button">56　細川　凌平</a>
+<a href="../images/fighters/F58_奈良間大己.png" class="song-button">58　奈良間大己</a>
+<a href="../images/fighters/F61_今川優馬.png" class="song-button">61　今川　優馬</a>
+<a href="../images/fighters/F64_田宮裕涼.png" class="song-button">64　田宮　裕涼</a>
+<a href="../images/fighters/F66_万波中正.png" class="song-button">66　万波　中正</a>
+<a href="../images/fighters/F99_レイエス.png" class="song-button">99　レイエス　</a>
+<a href="../images/fighters/F17_伊藤大海.png" class="song-button">17　伊藤　大海</a>
+<a href="../images/fighters/F18_山﨑福也.png" class="song-button">18　山﨑　福也</a>
+<a href="../images/fighters/F991_メインテーマ１-代打のテーマ-.png" class="song-button">代打のテーマ</a>
+<a href="../images/fighters/F992_メインテーマ２-奇数背番号選手-.png" class="song-button">奇数背番号選手</a>
+<a href="../images/fighters/F993_メインテーマ３-偶数背番号選手-.png" class="song-button">偶数背番号選手</a>
+<a href="../images/fighters/F994_投手用テーマ.png" class="song-button">投手用テーマ</a>
 
 <h2>チーム応援歌</h2>
-<a href="../images/fighters/Ft1_ひとつに～勝.png" class="song-button" target="_blank">ひとつになろう～勝利のために～</a>
-<a href="../images/fighters/Ft2_日ハム出塁.png" class="song-button" target="_blank">出塁テーマ</a>
-<a href="../images/fighters/Ft3_日ハム得点.png" class="song-button" target="_blank">お～い北海道</a>
-<a href="../images/fighters/Ft4_日ハム逆点.png" class="song-button" target="_blank">ファイターズ讃歌</a>
-<a href="../images/fighters/Ft5_ひとつに～歓.png" class="song-button" target="_blank">ひとつになろう～喜びをともに～</a>
-<a href="../images/fighters/Fc1_チャンスメイクテーマ.png" class="song-button" target="_blank">チャンスメイクテーマ</a>
-<a href="../images/fighters/Fc2_GoToチャンス.png" class="song-button" target="_blank">GoToチャンス</a>
-<a href="../images/fighters/Fc3_ジンギスカン.png" class="song-button" target="_blank">ジンギスカン</a>
-<a href="../images/fighters/Fc4_チキチキバンバン.png" class="song-button" target="_blank">チキチキバンバン</a>
-<a href="../images/fighters/Fc5_北の国から.png" class="song-button" target="_blank">北の国から</a>
-<a href="../images/fighters/Fc6_酔いどれマーチ.png" class="song-button" target="_blank">酔いどれマーチ</a>
-<a href="../images/fighters/Fc7_チャンス一撃.png" class="song-button" target="_blank">チャンス一撃</a>
-<a href="../images/fighters/Fc8_チャンステーマ東京.png" class="song-button" target="_blank">チャンステーマ東京</a>
-<a href="../images/fighters/Fc9_チャンステーマワッショイ.png" class="song-button" target="_blank">ワッショイ</a>
+<a href="../images/fighters/Ft1_ひとつに～勝.png" class="song-button">ひとつになろう～勝利のために～</a>
+<a href="../images/fighters/Ft2_日ハム出塁.png" class="song-button">出塁テーマ</a>
+<a href="../images/fighters/Ft3_日ハム得点.png" class="song-button">お～い北海道</a>
+<a href="../images/fighters/Ft4_日ハム逆点.png" class="song-button">ファイターズ讃歌</a>
+<a href="../images/fighters/Ft5_ひとつに～歓.png" class="song-button">ひとつになろう～喜びをともに～</a>
+<a href="../images/fighters/Fc1_チャンスメイクテーマ.png" class="song-button">チャンスメイクテーマ</a>
+<a href="../images/fighters/Fc2_GoToチャンス.png" class="song-button">GoToチャンス</a>
+<a href="../images/fighters/Fc3_ジンギスカン.png" class="song-button">ジンギスカン</a>
+<a href="../images/fighters/Fc4_チキチキバンバン.png" class="song-button">チキチキバンバン</a>
+<a href="../images/fighters/Fc5_北の国から.png" class="song-button">北の国から</a>
+<a href="../images/fighters/Fc6_酔いどれマーチ.png" class="song-button">酔いどれマーチ</a>
+<a href="../images/fighters/Fc7_チャンス一撃.png" class="song-button">チャンス一撃</a>
+<a href="../images/fighters/Fc8_チャンステーマ東京.png" class="song-button">チャンステーマ東京</a>
+<a href="../images/fighters/Fc9_チャンステーマワッショイ.png" class="song-button">ワッショイ</a>
 
 <h2>一括ダウンロード</h2>
-<a href="../images/fighters/fighters_all_songs.zip" class="song-button" target="_blank">一括ダウンロード</a>
+<a href="../images/fighters/fighters_all_songs.zip" class="download-button">一括ダウンロード</a>
 
-<!-- トップページに戻るボタン（中央揃え） -->
 <div style="text-align:center;">
   <a href="../index.html" class="back-link">← トップページに戻る</a>
 </div>
+
+<!-- モーダル本体 -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div class="title" id="modalTitle"></div>
+  <div class="hint">右クリックで保存できます</div>
+</div>
+
+<script>
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".song-button").forEach(btn => {
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent.trim();
+  });
+});
+
+closeBtn.onclick = () => { modal.style.display = "none"; }
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; }
+</script>
 
 </body>
 </html>
