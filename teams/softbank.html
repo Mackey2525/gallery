@@ -25,6 +25,14 @@ h1 {
   font-weight: bold;
 }
 
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
 h2 {
   margin-top: 30px;
   border-bottom: 2px solid var(--hawks-color);
@@ -185,6 +193,7 @@ iframe {
 <!-- ===== モーダル本体 ===== -->
 <div id="imageModal" class="modal">
   <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
   <img class="modal-content" id="modalImg">
   <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
 </div>
@@ -195,8 +204,11 @@ document.querySelectorAll('.song-button').forEach(btn => {
     e.preventDefault();
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+
     modal.style.display = "flex";
     modalImg.src = this.href;
+    modalTitle.textContent = this.textContent; // ← ボタンの文字をタイトルに
   });
 });
 
@@ -213,3 +225,4 @@ document.getElementById("imageModal").onclick = function(e) {
 
 </body>
 </html>
+
