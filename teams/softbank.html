@@ -74,6 +74,43 @@ iframe {
 .back-link:hover {
   opacity: 0.85;
 }
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 画像は実寸で中央表示 */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  max-width: none;
+  max-height: none;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
 </style>
 </head>
 <body>
@@ -85,58 +122,85 @@ iframe {
         title="YouTube video" allowfullscreen></iframe>
 
 <h2>個人応援歌</h2>
-<a href="../images/softbank/H0_川瀬晃.png" class="song-button" target="_blank">０　川瀬　晃　</a>
-<a href="../images/softbank/H03_近藤健介.png" class="song-button" target="_blank">３　近藤　健介</a>
-<a href="../images/softbank/H04_ダウンズ.png" class="song-button" target="_blank">４　ダウンズ　</a>
-<a href="../images/softbank/H05_山川穂高.png" class="song-button" target="_blank">５　山川　穂高</a>
-<a href="../images/softbank/H06_今宮健太.png" class="song-button" target="_blank">６　今宮　健太</a>
-<a href="../images/softbank/H07_中村晃.png" class="song-button" target="_blank">７　中村　晃　</a>
-<a href="../images/softbank/H08_牧原大成.png" class="song-button" target="_blank">８　牧原　大成</a>
-<a href="../images/softbank/H09_柳田悠岐.png" class="song-button" target="_blank">９　柳田　悠岐</a>
-<a href="../images/softbank/H12_嶺井博希.png" class="song-button" target="_blank">12　嶺井　博希</a>
-<a href="../images/softbank/H23_周東佑京.png" class="song-button" target="_blank">23　周東　佑京</a>
-<a href="../images/softbank/H24_栗原陵矢.png" class="song-button" target="_blank">24　栗原　陵矢</a>
-<a href="../images/softbank/H31_正木智也.png" class="song-button" target="_blank">31　正木　智也</a>
-<a href="../images/softbank/H32_柳町達.png" class="song-button" target="_blank">32　柳町　達　</a>
-<a href="../images/softbank/H45_谷川原健太.png" class="song-button" target="_blank">45　谷川原健太</a>
-<a href="../images/softbank/H62_海野隆司.png" class="song-button" target="_blank">62　海野　隆司</a>
-<a href="../images/softbank/H99_野村勇.png" class="song-button" target="_blank">99　野村　勇　</a>
-<a href="../images/softbank/H10_上沢直之.png" class="song-button" target="_blank">10　上沢　直之</a>
-<a href="../images/softbank/H11_津森宥紀.png" class="song-button" target="_blank">11　津森　宥紀</a>
-<a href="../images/softbank/H14_又吉克樹.png" class="song-button" target="_blank">14　又吉　克樹</a>
-<a href="../images/softbank/H16_東浜巨.png" class="song-button" target="_blank">16　東浜　巨　</a>
-<a href="../images/softbank/H17_有原航平.png" class="song-button" target="_blank">17　有原　航平</a>
-<a href="../images/softbank/H18_武田翔太.png" class="song-button" target="_blank">18　武田　翔太</a>
-<a href="../images/softbank/H26_大津亮介.png" class="song-button" target="_blank">26　大津　亮介</a>
-<a href="../images/softbank/H39_尾形崇斗.png" class="song-button" target="_blank">39　尾形　崇斗</a>
-<a href="../images/softbank/H40_杉山一樹.png" class="song-button" target="_blank">40　杉山　一樹</a>
-<a href="../images/softbank/H47_大関友久.png" class="song-button" target="_blank">47　大関　友久</a>
-<a href="../images/softbank/H48_藤井晧哉.png" class="song-button" target="_blank">48　藤井　晧哉</a>
-<a href="../images/softbank/H50_板東湧梧.png" class="song-button" target="_blank">50　板東　湧梧</a>
-<a href="../images/softbank/H56_田浦文丸.png" class="song-button" target="_blank">56　田浦　文丸</a>
-<a href="../images/softbank/H66_松本裕樹.png" class="song-button" target="_blank">66　松本　裕樹</a>
-<a href="../images/softbank/H59_長谷川威展.png" class="song-button" target="_blank">59　長谷川威展</a>
-<a href="../images/softbank/H991_Ｈ右打者汎用.png" class="song-button" target="_blank">右打者汎用</a>
-<a href="../images/softbank/H992_Ｈ左打者汎用.png" class="song-button" target="_blank">左打者汎用</a>
-<a href="../images/softbank/H993_Ｈ外国人投手.png" class="song-button" target="_blank">外国人投手</a>
+<a href="../images/softbank/H0_川瀬晃.png" class="song-button">０　川瀬　晃　</a>
+<a href="../images/softbank/H03_近藤健介.png" class="song-button">３　近藤　健介</a>
+<a href="../images/softbank/H04_ダウンズ.png" class="song-button">４　ダウンズ　</a>
+<a href="../images/softbank/H05_山川穂高.png" class="song-button">５　山川　穂高</a>
+<a href="../images/softbank/H06_今宮健太.png" class="song-button">６　今宮　健太</a>
+<a href="../images/softbank/H07_中村晃.png" class="song-button">７　中村　晃　</a>
+<a href="../images/softbank/H08_牧原大成.png" class="song-button">８　牧原　大成</a>
+<a href="../images/softbank/H09_柳田悠岐.png" class="song-button">９　柳田　悠岐</a>
+<a href="../images/softbank/H12_嶺井博希.png" class="song-button">12　嶺井　博希</a>
+<a href="../images/softbank/H23_周東佑京.png" class="song-button">23　周東　佑京</a>
+<a href="../images/softbank/H24_栗原陵矢.png" class="song-button">24　栗原　陵矢</a>
+<a href="../images/softbank/H31_正木智也.png" class="song-button">31　正木　智也</a>
+<a href="../images/softbank/H32_柳町達.png" class="song-button">32　柳町　達　</a>
+<a href="../images/softbank/H45_谷川原健太.png" class="song-button">45　谷川原健太</a>
+<a href="../images/softbank/H62_海野隆司.png" class="song-button">62　海野　隆司</a>
+<a href="../images/softbank/H99_野村勇.png" class="song-button">99　野村　勇　</a>
+<a href="../images/softbank/H10_上沢直之.png" class="song-button">10　上沢　直之</a>
+<a href="../images/softbank/H11_津森宥紀.png" class="song-button">11　津森　宥紀</a>
+<a href="../images/softbank/H14_又吉克樹.png" class="song-button">14　又吉　克樹</a>
+<a href="../images/softbank/H16_東浜巨.png" class="song-button">16　東浜　巨　</a>
+<a href="../images/softbank/H17_有原航平.png" class="song-button">17　有原　航平</a>
+<a href="../images/softbank/H18_武田翔太.png" class="song-button">18　武田　翔太</a>
+<a href="../images/softbank/H26_大津亮介.png" class="song-button">26　大津　亮介</a>
+<a href="../images/softbank/H39_尾形崇斗.png" class="song-button">39　尾形　崇斗</a>
+<a href="../images/softbank/H40_杉山一樹.png" class="song-button">40　杉山　一樹</a>
+<a href="../images/softbank/H47_大関友久.png" class="song-button">47　大関　友久</a>
+<a href="../images/softbank/H48_藤井晧哉.png" class="song-button">48　藤井　晧哉</a>
+<a href="../images/softbank/H50_板東湧梧.png" class="song-button">50　板東　湧梧</a>
+<a href="../images/softbank/H56_田浦文丸.png" class="song-button">56　田浦　文丸</a>
+<a href="../images/softbank/H66_松本裕樹.png" class="song-button">66　松本　裕樹</a>
+<a href="../images/softbank/H59_長谷川威展.png" class="song-button">59　長谷川威展</a>
+<a href="../images/softbank/H991_Ｈ右打者汎用.png" class="song-button">右打者汎用</a>
+<a href="../images/softbank/H992_Ｈ左打者汎用.png" class="song-button">左打者汎用</a>
+<a href="../images/softbank/H993_Ｈ外国人投手.png" class="song-button">外国人投手</a>
 
 <h2>チーム応援歌</h2>
-<a href="../images/softbank/Ht1_Ｈヒット.png" class="song-button" target="_blank">ヒット</a>
-<a href="../images/softbank/Ht2_ＨＨＲホーム.png" class="song-button" target="_blank">ホームラン</a>
-<a href="../images/softbank/Ht3_Ｈ得点ホーム.png" class="song-button" target="_blank">得点(ホーム)</a>
-<a href="../images/softbank/Ht4_Ｈ得点ビジタ.png" class="song-button" target="_blank">得点(ビジター)</a>
-<a href="../images/softbank/Hc1_Ｈチャンス１.png" class="song-button" target="_blank">チャンステーマ１</a>
-<a href="../images/softbank/Hc2_Ｈチャンス２.png" class="song-button" target="_blank">チャンステーマ２</a>
-<a href="../images/softbank/Hc3_Ｈチャンス３.png" class="song-button" target="_blank">チャンステーマ３</a>
-
+<a href="../images/softbank/Ht1_Ｈヒット.png" class="song-button">ヒット</a>
+<a href="../images/softbank/Ht2_ＨＨＲホーム.png" class="song-button">ホームラン</a>
+<a href="../images/softbank/Ht3_Ｈ得点ホーム.png" class="song-button">得点(ホーム)</a>
+<a href="../images/softbank/Ht4_Ｈ得点ビジタ.png" class="song-button">得点(ビジター)</a>
+<a href="../images/softbank/Hc1_Ｈチャンス１.png" class="song-button">チャンステーマ１</a>
+<a href="../images/softbank/Hc2_Ｈチャンス２.png" class="song-button">チャンステーマ２</a>
+<a href="../images/softbank/Hc3_Ｈチャンス３.png" class="song-button">チャンステーマ３</a>
 
 <h2>一括ダウンロード</h2>
-<a href="../images/softbank/softbank_all_songs.zip" class="song-button" target="_blank">一括ダウンロード</a>
+<a href="../images/softbank/softbank_all_songs.zip" class="song-button">一括ダウンロード</a>
 
 <!-- トップページに戻るボタン（中央揃え） -->
 <div style="text-align:center;">
   <a href="../index.html" class="back-link">← トップページに戻る</a>
 </div>
+
+<!-- ===== モーダル本体 ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+document.querySelectorAll('.song-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+  });
+});
+
+// 閉じるボタン
+document.querySelector(".close").onclick = function() {
+  document.getElementById("imageModal").style.display = "none";
+};
+
+// 背景クリックで閉じる
+document.getElementById("imageModal").onclick = function(e) {
+  if (e.target === this) this.style.display = "none";
+};
+</script>
 
 </body>
 </html>
