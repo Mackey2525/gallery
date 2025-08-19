@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,6 +7,8 @@
 
 <!-- 共通CSS読み込み -->
 <link rel="stylesheet" href="../css/team-colors.css">
+
+<link rel="icon" href="../images/logos/eagles.png" type="image/x-icon">
 
 <style>
 body {
@@ -24,6 +25,14 @@ h1 {
   font-weight: bold;
 }
 
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
 h2 {
   margin-top: 30px;
   border-bottom: 2px solid var(--eagles-color);
@@ -42,11 +51,11 @@ iframe {
 }
 
 /* 応援歌ボタン（固定サイズ版） */
-.song-button {
+.song-button, .download-button {
   display: inline-block;
   margin: 5px;
   padding: 10px 15px;
-  min-width: 140px;   /* 横幅を140pxに変更 */
+  min-width: 140px;
   text-align: center;
   background: var(--eagles-color); /* チームカラー */
   color: var(--eagles-text);       /* ボタン文字色 */
@@ -56,7 +65,7 @@ iframe {
   transition: 0.3s;
 }
 
-.song-button:hover {
+.song-button:hover, .download-button:hover {
   opacity: 0.85;
 }
 
@@ -73,6 +82,51 @@ iframe {
 .back-link:hover {
   opacity: 0.85;
 }
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;  /* 初期は非表示 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* モーダル画像（128pxに拡大固定） */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+/* 案内文 */
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
 </style>
 </head>
 <body>
@@ -84,19 +138,51 @@ iframe {
         title="YouTube video" allowfullscreen></iframe>
 
 <h2>個人応援歌</h2>
-<a href="../images/eagles/sakamoto.png" class="song-button" target="_blank">99　工事中　</a>
+<a href="../images/eagles/.png" class="song-button"></a>
 
 <h2>チーム応援歌</h2>
-<a href="../images/eagles/team_song.png" class="song-button" target="_blank">工事中</a>
+<a href="../images/eagles/.png" class="song-button"></a>
 
 <h2>一括ダウンロード</h2>
-<a href="../images/eagles/eagles_all_songs.zip" class="song-button" target="_blank">工事中</a>
+<a href="../images/eagles/eagles_all_songs.zip" class="download-button" target="_blank">一括ダウンロード</a>
 
 <!-- トップページに戻るボタン（中央揃え） -->
 <div style="text-align:center;">
   <a href="../index.html" class="back-link">← トップページに戻る</a>
 </div>
 
-</body>
+<!-- ===== モーダル本体 ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
+  <img class="modal-content" id="modalImg">
+  <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
+</div>
 
+<script>
+document.querySelectorAll('.song-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent; // ← ボタンの文字をタイトルに
+  });
+});
+
+// 閉じるボタン
+document.querySelector(".close").onclick = function() {
+  document.getElementById("imageModal").style.display = "none";
+};
+
+// 背景クリックで閉じる
+document.getElementById("imageModal").onclick = function(e) {
+  if (e.target === this) this.style.display = "none";
+};
+</script>
+
+</body>
 </html>
