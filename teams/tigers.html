@@ -25,6 +25,14 @@ h1 {
   font-weight: bold;
 }
 
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
 h2 {
   margin-top: 30px;
   border-bottom: 2px solid var(--tigers-color);
@@ -43,11 +51,11 @@ iframe {
 }
 
 /* 応援歌ボタン（固定サイズ版） */
-.song-button {
+.song-button, .download-button {
   display: inline-block;
   margin: 5px;
   padding: 10px 15px;
-  min-width: 140px;   /* 横幅を140pxに変更 */
+  min-width: 140px;
   text-align: center;
   background: var(--tigers-color); /* チームカラー */
   color: var(--tigers-text);       /* ボタン文字色 */
@@ -57,7 +65,7 @@ iframe {
   transition: 0.3s;
 }
 
-.song-button:hover {
+.song-button:hover, .download-button:hover {
   opacity: 0.85;
 }
 
@@ -74,6 +82,51 @@ iframe {
 .back-link:hover {
   opacity: 0.85;
 }
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;  /* 初期は非表示 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* モーダル画像（128pxに拡大固定） */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+/* 案内文 */
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
 </style>
 </head>
 <body>
@@ -85,43 +138,74 @@ iframe {
         title="YouTube video" allowfullscreen></iframe>
 
 <h2>個人応援歌</h2>
-<a href="../images/tigers/T0_木浪聖也.png" class="song-button" target="_blank">０　木浪　聖也</a>
-<a href="../images/tigers/T01_森下翔太.png" class="song-button" target="_blank">１　森下　翔太</a>
-<a href="../images/tigers/T02_梅野隆太郎.png" class="song-button" target="_blank">２　梅野隆太郎</a>
-<a href="../images/tigers/T03_大山悠輔.png" class="song-button" target="_blank">３　大山　悠輔</a>
-<a href="../images/tigers/T05_近本光司.png" class="song-button" target="_blank">５　近本　光司</a>
-<a href="../images/tigers/T08_佐藤輝明.png" class="song-button" target="_blank">８　佐藤　輝明</a>
-<a href="../images/tigers/T12_坂本誠志郎.png" class="song-button" target="_blank">12　坂本誠志郎</a>
-<a href="../images/tigers/T25_渡邉諒.png" class="song-button" target="_blank">25　渡邉　諒　</a>
-<a href="../images/tigers/T33_糸原健斗.png" class="song-button" target="_blank">33　糸原　健斗</a>
-<a href="../images/tigers/T38_小幡竜平.png" class="song-button" target="_blank">38　小幡　竜平</a>
-<a href="../images/tigers/T51_中野拓夢.png" class="song-button" target="_blank">51　中野　拓夢</a>
-<a href="../images/tigers/T53島田海吏.png" class="song-button" target="_blank">53　島田　海吏</a>
-<a href="../images/tigers/T58_前川右京.png" class="song-button" target="_blank">58　前川　右京</a>
-<a href="../images/tigers/T60_小野寺暖.png" class="song-button" target="_blank">60　小野寺　暖</a>
-<a href="../images/tigers/T94_原口文仁.png" class="song-button" target="_blank">94　原口　文仁</a>
-<a href="../images/tigers/T95_ヘルナンデス.png" class="song-button" target="_blank">95　ヘルナンデス</a>
-<a href="../images/tigers/T991_阪神捕手汎用.png" class="song-button" target="_blank">捕手汎用</a>
-<a href="../images/tigers/T992_阪神野手汎用.png" class="song-button" target="_blank">野手汎用</a>
-<a href="../images/tigers/T993_阪神外国人二.png" class="song-button" target="_blank">外国人選手二番</a>
-<a href="../images/tigers/T994_阪神投手汎用.png" class="song-button" target="_blank">投手汎用</a>
+<a href="../images/tigers/T0_木浪聖也.png" class="song-button">０　木浪　聖也</a>
+<a href="../images/tigers/T01_森下翔太.png" class="song-button">１　森下　翔太</a>
+<a href="../images/tigers/T02_梅野隆太郎.png" class="song-button">２　梅野隆太郎</a>
+<a href="../images/tigers/T03_大山悠輔.png" class="song-button">３　大山　悠輔</a>
+<a href="../images/tigers/T05_近本光司.png" class="song-button">５　近本　光司</a>
+<a href="../images/tigers/T08_佐藤輝明.png" class="song-button">８　佐藤　輝明</a>
+<a href="../images/tigers/T12_坂本誠志郎.png" class="song-button">12　坂本誠志郎</a>
+<a href="../images/tigers/T25_渡邉諒.png" class="song-button">25　渡邉　諒　</a>
+<a href="../images/tigers/T33_糸原健斗.png" class="song-button">33　糸原　健斗</a>
+<a href="../images/tigers/T38_小幡竜平.png" class="song-button">38　小幡　竜平</a>
+<a href="../images/tigers/T51_中野拓夢.png" class="song-button">51　中野　拓夢</a>
+<a href="../images/tigers/T53島田海吏.png" class="song-button">53　島田　海吏</a>
+<a href="../images/tigers/T58_前川右京.png" class="song-button">58　前川　右京</a>
+<a href="../images/tigers/T60_小野寺暖.png" class="song-button">60　小野寺　暖</a>
+<a href="../images/tigers/T94_原口文仁.png" class="song-button">94　原口　文仁</a>
+<a href="../images/tigers/T95_ヘルナンデス.png" class="song-button">95　ヘルナンデス</a>
+<a href="../images/tigers/T991_阪神捕手汎用.png" class="song-button">捕手汎用</a>
+<a href="../images/tigers/T992_阪神野手汎用.png" class="song-button">野手汎用</a>
+<a href="../images/tigers/T993_阪神外国人二.png" class="song-button">外国人選手二番</a>
+<a href="../images/tigers/T994_阪神投手汎用.png" class="song-button">投手汎用</a>
 
 <h2>チーム応援歌</h2>
-<a href="../images/tigers/Tt1_六甲おろし.png" class="song-button" target="_blank">六甲おろし</a>
-<a href="../images/tigers/Tt2_阪神出塁.png" class="song-button" target="_blank">出塁</a>
-<a href="../images/tigers/Tt3_阪神得点.png" class="song-button" target="_blank">得点</a>
-<a href="../images/tigers/Tc1_チャンスマーチ.png" class="song-button" target="_blank">チャンスマーチ</a>
-<a href="../images/tigers/Tc2_チャンス襲来.png" class="song-button" target="_blank">チャンス襲来</a>
-<a href="../images/tigers/Tc3_チャンスわっしょい.png" class="song-button" target="_blank">チャンスわっしょい</a>
-<a href="../images/tigers/Tc4_Ｔ－ＷＡＶＥ.png" class="song-button" target="_blank">T-WAVE</a>
+<a href="../images/tigers/Tt1_六甲おろし.png" class="song-button">六甲おろし</a>
+<a href="../images/tigers/Tt2_阪神出塁.png" class="song-button">出塁</a>
+<a href="../images/tigers/Tt3_阪神得点.png" class="song-button">得点</a>
+<a href="../images/tigers/Tc1_チャンスマーチ.png" class="song-button">チャンスマーチ</a>
+<a href="../images/tigers/Tc2_チャンス襲来.png" class="song-button">チャンス襲来</a>
+<a href="../images/tigers/Tc3_チャンスわっしょい.png" class="song-button">チャンスわっしょい</a>
+<a href="../images/tigers/Tc4_Ｔ－ＷＡＶＥ.png" class="song-button">T-WAVE</a>
 
 <h2>一括ダウンロード</h2>
-<a href="../images/tigers/tigers_all_songs.zip" class="song-button" target="_blank">一括ダウンロード</a>
+<a href="../images/tigers/tigers_all_songs.zip" class="download-button">一括ダウンロード</a>
 
 <!-- トップページに戻るボタン（中央揃え） -->
 <div style="text-align:center;">
   <a href="../index.html" class="back-link">← トップページに戻る</a>
 </div>
+
+<!-- モーダル本体 -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div class="title" id="modalTitle"></div>
+  <div class="hint">右クリックで保存できます</div>
+</div>
+
+<script>
+// モーダル表示処理
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".song-button").forEach(btn => {
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent.trim();
+  });
+});
+
+// 閉じるボタン
+closeBtn.onclick = () => { modal.style.display = "none"; }
+
+// 背景クリックで閉じる
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; }
+</script>
 
 </body>
 </html>
