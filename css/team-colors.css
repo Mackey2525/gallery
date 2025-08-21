@@ -1,4 +1,3 @@
-
 /* team-colors.css */
 :root {
   /* 読売ジャイアンツ */
@@ -15,15 +14,15 @@
 
   /* 横浜DeNAベイスターズ */
   --baystars-color: rgb(0, 63, 142);   /* 紺 */
-  --baystars-text: rgb(230, 242, 253);   /* 水色字 */
+  --baystars-text: rgb(230, 242, 253); /* 水色字 */
 
   /* 中日ドラゴンズ */
   --dragons-color: rgb(0, 37, 105);    /* 青 */
   --dragons-text: rgb(255, 255, 255);  /* 白文字 */
 
   /* 東京ヤクルトスワローズ */
-  --swallows-color: rgb(13, 78, 160);   /* 青 */
-  --swallows-text: rgb(255, 255, 255);     /* 白文字 */
+  --swallows-color: rgb(13, 78, 160);  /* 青 */
+  --swallows-text: rgb(255, 255, 255); /* 白文字 */
 
   /* 福岡ソフトバンクホークス */
   --hawks-color: rgb(252, 199, 0);     /* 黄 */
