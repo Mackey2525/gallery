@@ -21,8 +21,8 @@
   --dragons-text: rgb(255, 255, 255);  /* 白文字 */
 
   /* 東京ヤクルトスワローズ */
-  --swallows-color: rgb(0, 61, 152);   /* 青 */
-  --swallows-text: rgb(229, 0, 35);    /* 赤文字 */
+  --swallows-color: rgb(13, 78, 160);   /* 青 */
+  --swallows-text: rgb(230, 0, 38);    /* 赤文字 */
 
   /* 福岡ソフトバンクホークス */
   --hawks-color: rgb(252, 199, 0);     /* 黄 */
@@ -52,5 +52,6 @@
   --others-color: rgb(136, 136, 136);  /* グレー */
   --others-text: rgb(0, 0, 0);         /* 黒文字 */
 }
+
 
 
