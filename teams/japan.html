@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>その他</title>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFL20C2L2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFL20C2L2C');
+</script>
+
+<!-- 共通CSS読み込み -->
+<link rel="stylesheet" href="../css/team-colors.css">
+
+<link rel="icon" href="../images/logos/JAPAN.png" type="image/x-icon">
+
+<style>
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  max-width: 800px;
+  margin: auto;
+  color: #000; /* デフォルト文字色は黒 */
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid var(--japan-color);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* YouTube埋め込み */
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: none;
+}
+
+/* 応援歌ボタン（固定サイズ版） */
+.song-button, .download-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  min-width: 140px;
+  text-align: center;
+  background: var(--japan-color); /* チームカラー */
+  color: var(--japan-text);       /* ボタン文字色 */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.song-button:hover, .download-button:hover {
+  opacity: 0.85;
+}
+
+/* トップページに戻るボタン */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 8px 12px;
+  background: #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+}
+.back-link:hover {
+  opacity: 0.85;
+}
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;  /* 初期は非表示 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* モーダル画像（128pxに拡大固定） */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+/* 案内文 */
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
+</style>
+</head>
+<body>
+
+<h1>その他</h1>
+
+<!-- ページ上部にYouTube埋め込み -->
+<iframe src="https://www.youtube.com/embed/yU9OTjdlFaw" 
+        title="YouTube video" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/JHFqYN92l0A" 
+        title="YouTube video" allowfullscreen></iframe>
+
+<h2>侍ジャパン</h2>
+<a href="../images/japan/J02_牧秀悟.png" class="song-button">２　牧　秀悟</a>
+<a href="../images/japan/J03_小園海斗.png" class="song-button">３　小園　海斗</a>
+<a href="../images/japan/J04_若月健矢.png" class="song-button">４　若月　健矢</a>
+<a href="../images/japan/J05_牧原大成.png" class="song-button">５　牧原　大成</a>
+<a href="../images/japan/J06_源田壮亮.png" class="song-button">６　源田　壮亮</a>
+<a href="../images/japan/J07_佐藤輝明.png" class="song-button">７　佐藤　輝明</a>
+<a href="../images/japan/J08_近藤健介.png" class="song-button">８　近藤　健介</a>
+<a href="../images/japan/J12_坂本誠志郎.png" class="song-button">12　坂本誠志郎</a>
+<a href="../images/japan/J16_大谷翔平.png" class="song-button">16　大谷　翔平</a>
+<a href="../images/japan/J20_周東佑京.png" class="song-button">20　周東　佑京</a>
+<a href="../images/japan/J23_森下翔太.png" class="song-button">23　森下　翔太</a>
+<a href="../images/japan/J25_岡本和真.png" class="song-button">25　岡本　和真</a>
+<a href="../images/japan/J27_中村悠平.png" class="song-button">27　中村　悠平</a>
+<a href="../images/japan/J51_鈴木誠也.png" class="song-button">51　鈴木　誠也</a>
+<a href="../images/japan/J55_村上宗隆.png" class="song-button">55　村上　宗隆</a>
+
+<h2>一括ダウンロード</h2>
+<a href="../images/japan/japan_all_songs.zip" class="download-button" target="_blank">WBC2026</a>
+
+<!-- トップページに戻るボタン（中央揃え） -->
+<div style="text-align:center;">
+  <a href="../index.html" class="back-link">← トップページに戻る</a>
+</div>
+
+<!-- ===== モーダル本体 ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
+  <img class="modal-content" id="modalImg">
+  <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
+</div>
+
+<script>
+document.querySelectorAll('.song-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent; // ← ボタンの文字をタイトルに
+  });
+});
+
+// 閉じるボタン
+document.querySelector(".close").onclick = function() {
+  document.getElementById("imageModal").style.display = "none";
+};
+
+// 背景クリックで閉じる
+document.getElementById("imageModal").onclick = function(e) {
+  if (e.target === this) this.style.display = "none";
+};
+</script>
+
+</body>
+</html>
