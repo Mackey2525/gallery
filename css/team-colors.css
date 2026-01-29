@@ -51,4 +51,9 @@
   /* その他 */
   --others-color: rgb(136, 136, 136);  /* グレー */
   --others-text: rgb(0, 0, 0);         /* 黒文字 */
+
+  /* 侍 */
+  --others-color: rgb(27, 37, 45);  /* 紺 */
+  --others-text: rgb(209, 181, 85);         /* 金文字 */
+
 }
