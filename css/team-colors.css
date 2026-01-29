@@ -53,7 +53,7 @@
   --others-text: rgb(0, 0, 0);         /* 黒文字 */
 
   /* 侍 */
-  --others-color: rgb(27, 37, 45);  /* 紺 */
-  --others-text: rgb(209, 181, 85);         /* 金文字 */
+  --japan-color: rgb(27, 37, 45);  /* 紺 */
+  --japan-text: rgb(209, 181, 85);         /* 金文字 */
 
 }
