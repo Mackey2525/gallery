@@ -256,7 +256,7 @@ buttons.forEach(b=>b.classList.remove("active"));
 
 document.getElementById(tabName).classList.add("active");
 
-event.target.classList.add("active");
+document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add("active");
 
 }
 
@@ -264,3 +264,4 @@ event.target.classList.add("active");
 
 </body>
 </html>
+
