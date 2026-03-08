@@ -1,133 +1,266 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>プロスピ応援曲置き場</title>
-  <!-- Google tag (gtag.js) -->
+<title>プロスピ・パワプロ応援曲ギャラリー</title>
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFL20C2L2C"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JFL20C2L2C');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JFL20C2L2C');
 </script>
-  
+
 <link rel="icon" href="images/logos/Mackey.png" type="image/png">
+
 <style>
-body {
-  font-family: sans-serif;
-  padding: 20px;
-  background:#f9f9f9;
-}
-h1 {
-  text-align:center;
+
+body{
+font-family:sans-serif;
+padding:20px;
+background:#f9f9f9;
 }
 
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 横2列 */
-  gap: 15px;
-  max-width: 670px; 
-  margin: 0 auto;
+h1{
+text-align:center;
+margin-bottom:20px;
 }
 
-.teamLink {
-  display: flex;
-  align-items: center; /* 画像と文字を縦中央揃え */
-  gap: 10px;
-  padding: 10px 15px;
-  background: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  font-weight: bold;
-  white-space: normal;   /* 文字は必要に応じて折り返し */
+/* タブ */
+
+.tabs{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-bottom:25px;
 }
 
-/* ロゴ画像の共通設定 */
-.teamLink img {
-  height: 2em;       /* 高さは文字の2倍 */
-  width: 3em;        /* 横幅を統一 */
-  object-fit: contain; /* 縦横比を維持 */
-  flex-shrink: 0;
-
-  /* 右クリック・ドラッグ禁止 */
-  -webkit-user-drag: none;
-  user-drag: none;
-  pointer-events: none;
+.tabButton{
+padding:10px 25px;
+border:none;
+background:#ddd;
+cursor:pointer;
+font-weight:bold;
+border-radius:6px;
 }
 
-/* 透かし風効果（薄く白線を重ねる例） */
-.teamLink img::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255,255,255,0.2),
-    rgba(255,255,255,0.2) 1px,
-    transparent 1px,
-    transparent 4px
-  );
-  pointer-events: none;
+.tabButton.active{
+background:#333;
+color:#fff;
 }
+
+/* チームグリッド */
+
+.teamGrid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+max-width:670px;
+margin:0 auto;
+}
+
+.teamLink{
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px 15px;
+background:#fff;
+border-radius:6px;
+text-decoration:none;
+color:#000;
+box-shadow:0 2px 4px rgba(0,0,0,0.1);
+font-weight:bold;
+white-space:normal;
+}
+
+.teamLink img{
+height:2em;
+width:3em;
+object-fit:contain;
+flex-shrink:0;
+
+-webkit-user-drag:none;
+user-drag:none;
+pointer-events:none;
+}
+
+/* タブ内容 */
+
+.tabContent{
+display:none;
+}
+
+.tabContent.active{
+display:block;
+}
+
 </style>
 </head>
+
+
 <body>
 
-<h1>プロスピ応援曲置き場</h1>
+<h1>応援曲置き場</h1>
+
+<div class="tabs">
+<button class="tabButton active" onclick="openTab('prosupi')">プロスピ</button>
+<button class="tabButton" onclick="openTab('pawapuro')">パワプロ</button>
+</div>
+
+
+<!-- プロスピ -->
+
+<div id="prosupi" class="tabContent active">
 
 <div class="teamGrid">
-  <a href="teams/giants.html" class="teamLink">
-    <img src="images/logos/giants.png" alt="巨人" oncontextmenu="return false;">読売ジャイアンツ
-  </a>
-  <a href="teams/softbank.html" class="teamLink">
-    <img src="images/logos/softbank.png" alt="ソフトバンク" oncontextmenu="return false;">福岡ソフトバンクホークス
-  </a>
-  <a href="teams/tigers.html" class="teamLink">
-    <img src="images/logos/tigers.png" alt="阪神" oncontextmenu="return false;">阪神タイガース
-  </a>
-  <a href="teams/fighters.html" class="teamLink">
-    <img src="images/logos/fighters.png" alt="日本ハム" oncontextmenu="return false;">北海道日本ハムファイターズ
-  </a>
-  <a href="teams/baystars.html" class="teamLink">
-    <img src="images/logos/baystars.png" alt="横浜" oncontextmenu="return false;">横浜DeNAベイスターズ
-  </a>
-  <a href="teams/marines.html" class="teamLink">
-    <img src="images/logos/marines.png" alt="ロッテ" oncontextmenu="return false;">千葉ロッテマリーンズ
-  </a>
-  <a href="teams/carp.html" class="teamLink">
-    <img src="images/logos/carp.png" alt="広島" oncontextmenu="return false;">広島東洋カープ
-  </a>
-  <a href="teams/eagles.html" class="teamLink">
-    <img src="images/logos/eagles.png" alt="楽天" oncontextmenu="return false;">東北楽天ゴールデンイーグルス
-  </a>
-  <a href="teams/yakult.html" class="teamLink">
-    <img src="images/logos/yakult.png" alt="ヤクルト" oncontextmenu="return false;">東京ヤクルトスワローズ
-  </a>
-  <a href="teams/buffaloes.html" class="teamLink">
-    <img src="images/logos/buffaloes.png" alt="オリックス" oncontextmenu="return false;">オリックス・バファローズ
-  </a>
-  <a href="teams/dragons.html" class="teamLink">
-    <img src="images/logos/dragons.png" alt="中日" oncontextmenu="return false;">中日ドラゴンズ
-  </a>
-  <a href="teams/lions.html" class="teamLink">
-    <img src="images/logos/lions.png" alt="西武" oncontextmenu="return false;">埼玉西武ライオンズ
-  </a>
-  <a href="teams/japan.html" class="teamLink">
-    <img src="images/logos/JAPAN.png" alt="ジャパン" oncontextmenu="return false;">侍ジャパン
-  </a>
-  <a href="teams/others.html" class="teamLink">
-    <img src="images/logos/others.png" alt="その他" oncontextmenu="return false;">その他
-  </a>
+
+<a href="teams/giants.html" class="teamLink">
+<img src="images/logos/giants.png">読売ジャイアンツ
+</a>
+
+<a href="teams/softbank.html" class="teamLink">
+<img src="images/logos/softbank.png">福岡ソフトバンクホークス
+</a>
+
+<a href="teams/tigers.html" class="teamLink">
+<img src="images/logos/tigers.png">阪神タイガース
+</a>
+
+<a href="teams/fighters.html" class="teamLink">
+<img src="images/logos/fighters.png">北海道日本ハムファイターズ
+</a>
+
+<a href="teams/baystars.html" class="teamLink">
+<img src="images/logos/baystars.png">横浜DeNAベイスターズ
+</a>
+
+<a href="teams/marines.html" class="teamLink">
+<img src="images/logos/marines.png">千葉ロッテマリーンズ
+</a>
+
+<a href="teams/carp.html" class="teamLink">
+<img src="images/logos/carp.png">広島東洋カープ
+</a>
+
+<a href="teams/eagles.html" class="teamLink">
+<img src="images/logos/eagles.png">東北楽天ゴールデンイーグルス
+</a>
+
+<a href="teams/yakult.html" class="teamLink">
+<img src="images/logos/yakult.png">東京ヤクルトスワローズ
+</a>
+
+<a href="teams/buffaloes.html" class="teamLink">
+<img src="images/logos/buffaloes.png">オリックス・バファローズ
+</a>
+
+<a href="teams/dragons.html" class="teamLink">
+<img src="images/logos/dragons.png">中日ドラゴンズ
+</a>
+
+<a href="teams/lions.html" class="teamLink">
+<img src="images/logos/lions.png">埼玉西武ライオンズ
+</a>
+
+<a href="teams/japan.html" class="teamLink">
+<img src="images/logos/JAPAN.png">侍ジャパン
+</a>
+
+<a href="teams/others.html" class="teamLink">
+<img src="images/logos/others.png">その他
+</a>
+
 </div>
+</div>
+
+
+
+<!-- パワプロ -->
+
+<div id="pawapuro" class="tabContent">
+
+<div class="teamGrid">
+
+<a href="pawapuro/teams/giants.html" class="teamLink">
+<img src="images/logos/giants.png">読売ジャイアンツ
+</a>
+
+<a href="pawapuro/teams/softbank.html" class="teamLink">
+<img src="images/logos/softbank.png">福岡ソフトバンクホークス
+</a>
+
+<a href="pawapuro/teams/tigers.html" class="teamLink">
+<img src="images/logos/tigers.png">阪神タイガース
+</a>
+
+<a href="pawapuro/teams/fighters.html" class="teamLink">
+<img src="images/logos/fighters.png">北海道日本ハムファイターズ
+</a>
+
+<a href="pawapuro/teams/baystars.html" class="teamLink">
+<img src="images/logos/baystars.png">横浜DeNAベイスターズ
+</a>
+
+<a href="pawapuro/teams/marines.html" class="teamLink">
+<img src="images/logos/marines.png">千葉ロッテマリーンズ
+</a>
+
+<a href="pawapuro/teams/carp.html" class="teamLink">
+<img src="images/logos/carp.png">広島東洋カープ
+</a>
+
+<a href="pawapuro/teams/eagles.html" class="teamLink">
+<img src="images/logos/eagles.png">東北楽天ゴールデンイーグルス
+</a>
+
+<a href="pawapuro/teams/yakult.html" class="teamLink">
+<img src="images/logos/yakult.png">東京ヤクルトスワローズ
+</a>
+
+<a href="pawapuro/teams/buffaloes.html" class="teamLink">
+<img src="images/logos/buffaloes.png">オリックス・バファローズ
+</a>
+
+<a href="pawapuro/teams/dragons.html" class="teamLink">
+<img src="images/logos/dragons.png">中日ドラゴンズ
+</a>
+
+<a href="pawapuro/teams/lions.html" class="teamLink">
+<img src="images/logos/lions.png">埼玉西武ライオンズ
+</a>
+
+<a href="pawapuro/teams/japan.html" class="teamLink">
+<img src="images/logos/JAPAN.png">侍ジャパン
+</a>
+
+<a href="pawapuro/teams/others.html" class="teamLink">
+<img src="images/logos/others.png">その他
+</a>
+
+</div>
+</div>
+
+
+<script>
+
+function openTab(tabName){
+
+let contents=document.querySelectorAll(".tabContent");
+let buttons=document.querySelectorAll(".tabButton");
+
+contents.forEach(c=>c.classList.remove("active"));
+buttons.forEach(b=>b.classList.remove("active"));
+
+document.getElementById(tabName).classList.add("active");
+
+event.target.classList.add("active");
+
+}
+
+</script>
 
 </body>
 </html>
-
