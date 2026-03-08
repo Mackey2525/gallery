@@ -52,10 +52,11 @@ font-size:16px;
 .tabButton.active{
 border-bottom:3px solid #333;
 }
-  
+
 .tabButton:hover{
 opacity:0.6;
 }
+
 /* チームグリッド */
 
 .teamGrid{
@@ -85,7 +86,6 @@ height:2em;
 width:3em;
 object-fit:contain;
 flex-shrink:0;
-
 -webkit-user-drag:none;
 user-drag:none;
 pointer-events:none;
@@ -101,14 +101,16 @@ display:none;
 display:block;
 }
 
+/* 背景 */
+
 body.prosupi{
 background:#eef5ff;
 }
 
 body.pawapuro{
 background:#fff4e8;
-}  
-  
+}
+
 </style>
 </head>
 
@@ -118,8 +120,8 @@ background:#fff4e8;
 <h1>応援曲置き場</h1>
 
 <div class="tabs">
-<button class="tabButton active" onclick="openTab('prosupi')">プロスピ</button>
-<button class="tabButton" onclick="openTab('pawapuro')">パワプロ</button>
+<button class="tabButton active" onclick="openTab(event,'prosupi')">プロスピ</button>
+<button class="tabButton" onclick="openTab(event,'pawapuro')">パワプロ</button>
 </div>
 
 
@@ -258,7 +260,7 @@ background:#fff4e8;
 
 <script>
 
-function openTab(tabName){
+function openTab(event,tabName){
 
 let contents=document.querySelectorAll(".tabContent");
 let buttons=document.querySelectorAll(".tabButton");
@@ -274,13 +276,31 @@ event.target.classList.add("active");
 document.body.classList.remove("prosupi","pawapuro");
 document.body.classList.add(tabName);
 
+/* タブ保存 */
+localStorage.setItem("selectedTab",tabName);
+
 }
+
+
+/* ページ読み込み時復元 */
+
+window.addEventListener("DOMContentLoaded",function(){
+
+let savedTab=localStorage.getItem("selectedTab");
+
+if(savedTab){
+
+let btn=document.querySelector(`button[onclick*="${savedTab}"]`);
+
+if(btn){
+openTab({target:btn},savedTab);
+}
+
+}
+
+});
 
 </script>
 
 </body>
 </html>
-
-
-
-
