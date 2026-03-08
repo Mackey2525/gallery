@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>その他</title>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFL20C2L2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFL20C2L2C');
+</script>
+
+<!-- 共通CSS読み込み -->
+<link rel="stylesheet" href="../css/team-colors.css">
+
+<link rel="icon" href="../images/logos/others.png" type="image/x-icon">
+
+<style>
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  max-width: 800px;
+  margin: auto;
+  color: #000; /* デフォルト文字色は黒 */
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid var(--others-color);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* YouTube埋め込み */
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: none;
+}
+
+/* 応援歌ボタン（固定サイズ版） */
+.song-button, .download-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  min-width: 140px;
+  text-align: center;
+  background: var(--others-color); /* チームカラー */
+  color: var(--others-text);       /* ボタン文字色 */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.song-button:hover, .download-button:hover {
+  opacity: 0.85;
+}
+
+/* トップページに戻るボタン */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 8px 12px;
+  background: #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+}
+.back-link:hover {
+  opacity: 0.85;
+}
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;  /* 初期は非表示 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* モーダル画像（128pxに拡大固定） */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+/* 案内文 */
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
+</style>
+</head>
+<body>
+
+<h1>その他</h1>
+
+<!-- ページ上部にYouTube埋め込み -->
+<iframe src="https://www.youtube.com/embed/yU9OTjdlFaw" 
+        title="YouTube video" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/JHFqYN92l0A" 
+        title="YouTube video" allowfullscreen></iframe>
+
+<h2>高校野球</h2>
+<a href="../images/others/曲_栄冠は君に輝.png" class="song-button">栄冠は君に輝く</a>
+<a href="../images/others/曲_横浜高校弟五.png" class="song-button">横浜高校弟五応援歌</a>
+<a href="../images/others/曲_横高アトム.png" class="song-button">横高アトム</a>
+<a href="../images/others/曲_アゲアゲホイ.png" class="song-button">アゲアゲホイホイ</a>
+<a href="../images/others/曲_星空の下の.png" class="song-button">星空の下のディスタンス</a>
+<a href="../images/others/曲_エルクンバン.png" class="song-button">エル・クンバンチェロ </a>
+<a href="../images/others/曲_アフリカン.png" class="song-button">アフリカン・シンフォニー</a>
+<a href="../images/others/曲_サウスポー.png" class="song-button">サウスポー</a>
+<a href="../images/others/曲_パイレーツ.png" class="song-button">パイレーツオブカリビアン</a>
+<a href="../images/others/曲_レッツゴー習.png" class="song-button">レッツゴー習志野</a>
+<a href="../images/others/曲_ルパンⅢ世.png" class="song-button">ルパン三世のテーマ</a>
+<a href="../images/others/曲_ヤマト.png" class="song-button">宇宙戦艦ヤマト</a>
+<a href="../images/others/曲_狙い打ち.png" class="song-button">狙い撃ち</a>
+<a href="../images/others/曲_サンライズ.png" class="song-button">SUNRISE</a>
+<a href="../images/others/曲_タッチ.png" class="song-button">タッチ</a>
+<a href="../images/others/曲_あまちゃん.png" class="song-button">あまちゃんのテーマ</a>
+<a href="../images/others/曲_紅.png" class="song-button">紅</a>
+<a href="../images/others/曲_ラ・マカレナ.png" class="song-button">ラ・マカレナ</a>
+<a href="../images/others/曲_さくらんぼ.png" class="song-button">さくらんぼ</a>
+<a href="../images/others/曲_ポパイ.png" class="song-button">ポパイ・ザ・セーラーマン</a>
+<a href="../images/others/曲_バンビーナ.png" class="song-button">バンビーナ</a>
+<a href="../images/others/曲_パラダイス銀.png" class="song-button">パラダイス銀河</a>
+<a href="../images/others/曲_アラレちゃん.png" class="song-button">アラレちゃん</a>
+<a href="../images/others/曲_キューティＨ.png" class="song-button">キューティハニー</a>
+<a href="../images/others/曲_秘密のアッコ.png" class="song-button">ひみつのアッコちゃん</a>
+<a href="../images/others/曲_ＹｏｕＡｒｅ.png" class="song-button">YouAreスラッガー</a>
+<a href="../images/others/曲_ＯｖｅｒＤｒ.png" class="song-button">Over Drive</a>
+<a href="../images/others/曲_倍倍ファイト.png" class="song-button">倍倍FIGHT!</a>
+<a href="../images/others/曲_勝手にシンド.png" class="song-button">勝手にシンドバッド</a>
+<a href="../images/others/曲_かわいいだけ.png" class="song-button">かわいいだけじゃだめですか?</a>
+<a href="../images/others/曲_ＣｏｍｅＯｎ.png" class="song-button">ComeOn!</a>
+<a href="../images/others/曲_Ｃｈａｎｃｅ.png" class="song-button">Chance</a>
+<a href="../images/others/曲_ジョックロッ.png" class="song-button">ジョックロック</a>
+<a href="../images/others/曲_日曜日からの.png" class="song-button">日曜日よりの使者</a>
+<a href="../images/others/曲_ＳｅａＯｆｆ.png" class="song-button">SEE OFF</a>
+<a href="../images/others/曲_ハイサイ.png" class="song-button">ハイサイおじさん</a>
+<a href="../images/others/曲_暴れん坊将軍.png" class="song-button">暴れん坊将軍のテーマ</a>
+<a href="../images/others/曲_県岐商ＤＱ３.png" class="song-button">DQⅢ戦闘のテーマ</a>
+<a href="../images/others/曲_うまぴょい.png" class="song-button">うまぴょい伝説</a>
+
+<h2>社会人野球</h2>
+<a href="../images/others/.png" class="song-button">工事中</a>
+
+<h2>一括ダウンロード</h2>
+<a href="../images/others/high_school_all_songs.zip" class="download-button" target="_blank">高校野球</a>
+<a href="../images/others/others_all_songs.zip" class="download-button" target="_blank">工事中</a>
+
+<!-- トップページに戻るボタン（中央揃え） -->
+<div style="text-align:center;">
+  <a href="../index.html" class="back-link">← トップページに戻る</a>
+</div>
+
+<!-- ===== モーダル本体 ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
+  <img class="modal-content" id="modalImg">
+  <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
+</div>
+
+<script>
+document.querySelectorAll('.song-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent; // ← ボタンの文字をタイトルに
+  });
+});
+
+// 閉じるボタン
+document.querySelector(".close").onclick = function() {
+  document.getElementById("imageModal").style.display = "none";
+};
+
+// 背景クリックで閉じる
+document.getElementById("imageModal").onclick = function(e) {
+  if (e.target === this) this.style.display = "none";
+};
+</script>
+
+</body>
+</html>

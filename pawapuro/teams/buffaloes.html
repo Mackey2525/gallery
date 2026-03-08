@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>オリックス・バファローズ</title>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFL20C2L2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFL20C2L2C');
+</script>
+
+<!-- 共通CSS読み込み -->
+<link rel="stylesheet" href="../css/team-colors.css">
+
+<link rel="icon" href="../images/logos/buffaloes.png" type="image/x-icon">
+
+<style>
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  max-width: 800px;
+  margin: auto;
+  color: #000; /* デフォルト文字色は黒 */
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid var(--buffaloes-color);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* YouTube埋め込み */
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: none;
+}
+
+/* 応援歌ボタン（固定サイズ版） */
+.song-button, .download-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  min-width: 140px;
+  text-align: center;
+  background: var(--buffaloes-color); /* チームカラー */
+  color: var(--buffaloes-text);       /* ボタン文字色 */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.song-button:hover, .download-button:hover {
+  opacity: 0.85;
+}
+
+/* トップページに戻るボタン */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 8px 12px;
+  background: #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+}
+.back-link:hover {
+  opacity: 0.85;
+}
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;  /* 初期は非表示 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* モーダル画像（128pxに拡大固定） */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+/* 案内文 */
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
+</style>
+</head>
+<body>
+
+<h1>オリックス・バファローズ</h1>
+
+<!-- ページ上部にYouTube埋め込み -->
+<iframe src="https://www.youtube.com/embed/ex8_T2VttyI" 
+        title="YouTube video" allowfullscreen></iframe>
+
+<h2>個人応援歌</h2>
+<a href="../images/buffaloes/O02_若月健矢.png" class="song-button">２　若月　健矢</a>
+<a href="../images/buffaloes/O04_森友哉-exultation-DEEP_REDpng" class="song-button">４　森　友哉 DEEP RED</a>
+<a href="../images/buffaloes/O04_森友哉-exultation-RED.png" class="song-button">４　森　友哉 RED</a>
+<a href="../images/buffaloes/O04_森友哉-exultation-WHITE.png" class="song-button">４　森　友哉 WHITE</a>
+<a href="../images/buffaloes/O05_西野真弘.png" class="song-button">５　西野　真弘</a>
+<a href="../images/buffaloes/O06_宗佑磨.png" class="song-button">６　宗　佑磨　</a>
+<a href="../images/buffaloes/O07_西川龍馬-決然-.png" class="song-button">７西川　龍馬-決然-</a>
+<a href="../images/buffaloes/O07_西川龍馬-天賦-.png" class="song-button">７西川　龍馬-天賦-</a>
+<a href="../images/buffaloes/O09_野口智哉.png" class="song-button">９　野口　智哉</a>
+<a href="../images/buffaloes/O10_大城滉二.png" class="song-button">10　大城　滉二</a>
+<a href="../images/buffaloes/O24_紅林弘太郎.png" class="song-button">24　紅林弘太郎</a>
+<a href="../images/buffaloes/O30_廣岡大志.png" class="song-button">30　廣岡　大志</a>
+<a href="../images/buffaloes/O31_太田椋.png" class="song-button">31　太田　椋　</a>
+<a href="../images/buffaloes/O37_石川亮.png" class="song-button">37　石川　亮　</a>
+<a href="../images/buffaloes/O41_佐野晧大.png" class="song-button">41　佐野　晧大</a>
+<a href="../images/buffaloes/O44_頓宮裕真.png" class="song-button">44　頓宮　裕真</a>
+<a href="../images/buffaloes/O61_茶野篤政.png" class="song-button">61　茶野　篤政</a>
+<a href="../images/buffaloes/O65_福田周平-サクラサク篇-.png" class="song-button">65　福田　周平-サクラサク篇-</a>
+<a href="../images/buffaloes/O65_福田周平-火鑽篇-.png" class="song-button">65　福田　周平-火鑽篇-</a>
+<a href="../images/buffaloes/O67_中川圭太.png" class="song-button">67　中川　圭太</a>
+<a href="../images/buffaloes/O99_杉本裕太郎.png" class="song-button">99　杉本裕太郎</a>
+<a href="../images/buffaloes/O153_宜保翔.png" class="song-button">153　宜保　翔　</a>
+<a href="../images/buffaloes/O991_助っ人テーマ.png" class="song-button">助っ人テーマ</a>
+<a href="../images/buffaloes/O992_メインテーマ.png" class="song-button">Bsメインテーマ</a>
+<a href="../images/buffaloes/O993_代打テーマ.png" class="song-button">代打テーマ</a>
+
+<h2>チーム応援歌</h2>
+<a href="../images/buffaloes/Ot1_讃丑歌.png" class="song-button">讃丑歌</a>
+<a href="../images/buffaloes/Ot2_出塁.png" class="song-button">出塁テーマ</a>
+<a href="../images/buffaloes/Ot3_得点帝国.png" class="song-button">得点帝国</a>
+<a href="../images/buffaloes/Ot4_BuffaYell.png" class="song-button">BuffaYell</a>
+<a href="../images/buffaloes/Ot5_酔勝歌-丑の勲章-.png" class="song-button">酔勝歌～丑の勲章～</a>
+<a href="../images/buffaloes/Oc1_丑男-COW_BOY-.png" class="song-button">丑男-COW BOY-</a>
+<a href="../images/buffaloes/Oc2_タオル.png" class="song-button">タオル</a>
+<a href="../images/buffaloes/Oc3_ジャンプ.png" class="song-button">ジャンプ</a>
+<a href="../images/buffaloes/Oc4_欲球根情-河内のオッサンの丑-.png" class="song-button">欲球根性　～河内のオッサンの丑～</a>
+<a href="../images/buffaloes/Oc5_笑牛拳.png" class="song-button">笑牛拳</a>
+<a href="../images/buffaloes/Oc6_丑王-Bs_history-.png" class="song-button">丑王-Bs history-</a>
+<a href="../images/buffaloes/Oc7_BuffaRock-覇者の丑-.png" class="song-button">BuffaRock-覇者の丑-</a>
+
+<h2>一括ダウンロード</h2>
+<a href="../images/buffaloes/buffaloes_all_songs.zip" class="download-button" target="_blank">一括ダウンロード</a>
+
+<!-- トップページに戻るボタン（中央揃え） -->
+<div style="text-align:center;">
+  <a href="../index.html" class="back-link">← トップページに戻る</a>
+</div>
+
+<!-- ===== モーダル本体 ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
+  <img class="modal-content" id="modalImg">
+  <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
+</div>
+
+<script>
+document.querySelectorAll('.song-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent; // ← ボタンの文字をタイトルに
+  });
+});
+
+// 閉じるボタン
+document.querySelector(".close").onclick = function() {
+  document.getElementById("imageModal").style.display = "none";
+};
+
+// 背景クリックで閉じる
+document.getElementById("imageModal").onclick = function(e) {
+  if (e.target === this) this.style.display = "none";
+};
+</script>
+
+</body>
+</html>

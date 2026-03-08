@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東北楽天ゴールデンイーグルス</title>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFL20C2L2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JFL20C2L2C');
+</script>
+
+<!-- 共通CSS読み込み -->
+<link rel="stylesheet" href="../css/team-colors.css">
+
+<link rel="icon" href="../images/logos/eagles.png" type="image/x-icon">
+
+<style>
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  max-width: 800px;
+  margin: auto;
+  color: #000; /* デフォルト文字色は黒 */
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid var(--eagles-color);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* YouTube埋め込み */
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: none;
+}
+
+/* 応援歌ボタン（固定サイズ版） */
+.song-button, .download-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  min-width: 140px;
+  text-align: center;
+  background: var(--eagles-color); /* チームカラー */
+  color: var(--eagles-text);       /* ボタン文字色 */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.song-button:hover, .download-button:hover {
+  opacity: 0.85;
+}
+
+/* トップページに戻るボタン */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 8px 12px;
+  background: #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+}
+.back-link:hover {
+  opacity: 0.85;
+}
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;  /* 初期は非表示 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* モーダル画像（128pxに拡大固定） */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+/* 案内文 */
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
+</style>
+</head>
+<body>
+
+<h1>東北楽天ゴールデンイーグルス</h1>
+
+<!-- ページ上部にYouTube埋め込み -->
+<iframe src="https://www.youtube.com/embed/1LPj9ouDdUA" 
+        title="YouTube video" allowfullscreen></iframe>
+
+<h2>個人応援歌</h2>
+<a href="../images/eagles/E00_小深田大翔.png" class="song-button">０　小深田大翔</a>
+<a href="../images/eagles/E01_宗山塁.png" class="song-button">１　宗山　塁　</a>
+<a href="../images/eagles/E02_太田光.png" class="song-button">２　太田　光　</a>
+<a href="../images/eagles/E03_浅村栄斗.png" class="song-button">３　浅村　栄斗</a>
+<a href="../images/eagles/E06_村林一輝.png" class="song-button">６　村林　一輝</a>
+<a href="../images/eagles/E07_鈴木大地.png" class="song-button">７　鈴木　大地</a>
+<a href="../images/eagles/E08_辰己涼介.png" class="song-button">８　辰己　涼介</a>
+<a href="../images/eagles/E09_ボイト.png" class="song-button">９　ボイト　</a>
+<a href="../images/eagles/E24_黒川史陽.png" class="song-button">24　黒川　史陽</a>
+<a href="../images/eagles/E25_田中和基.png" class="song-button">25　田中　和基</a>
+<a href="../images/eagles/E27_伊藤光.png" class="song-button">27　伊藤　光　</a>
+<a href="../images/eagles/E32_中島大輔.png" class="song-button">32　中島　大輔</a>
+<a href="../images/eagles/E48_渡邊佳明.png" class="song-button">35　渡邊　佳明</a>
+<a href="../images/eagles/E38_佐藤直樹.png" class="song-button">38　佐藤　直樹</a>
+<a href="../images/eagles/E39_伊藤裕希也.png" class="song-button">39　伊藤裕希也</a>
+<a href="../images/eagles/E50_武藤敦貴.png" class="song-button">50　武藤　敦貴</a>
+<a href="../images/eagles/E51_小郷裕哉.png" class="song-button">51　小郷　裕哉</a>
+<a href="../images/eagles/E55_安田悠馬.png" class="song-button">55　YG安田</a>
+<a href="../images/eagles/E65_堀内謙伍.png" class="song-button">65　堀内　謙伍</a>
+<a href="../images/eagles/E70_石原彪.png" class="song-button">70　石原　彪　</a>
+<a href="../images/eagles/E991_汎用テーマ.png" class="song-button">汎用テーマ</a>
+<a href="../images/eagles/E992_汎用テーマ２.png" class="song-button">汎用テーマ２</a>
+<a href="../images/eagles/E993_共通テーマ.png" class="song-button">共通テーマ</a>
+<a href="../images/eagles/E994_共通テーマ２.png" class="song-button">共通テーマ２</a>
+<a href="../images/eagles/E995_外国人選手汎用.png" class="song-button">外国人選手汎用</a>
+<a href="../images/eagles/E996_投手汎用.png" class="song-button">投手汎用</a>
+
+<h2>チーム応援歌</h2>
+<a href="../images/eagles/Et1_初回先頭打者テーマ.png" class="song-button">初回先頭打者テーマ</a>
+<a href="../images/eagles/Et2_楽天出塁.png" class="song-button">出塁テーマ</a>
+<a href="../images/eagles/Et3_楽天得点.png" class="song-button">得点テーマ</a>
+<a href="../images/eagles/Et4_楽天ホームラ.png" class="song-button">ホームランテーマ</a>
+<a href="../images/eagles/Et5_マルチテーマ.png" class="song-button">マルチテーマ</a>
+<a href="../images/eagles/Et6_マルチテーマ２.png" class="song-button">マルチテーマ2</a>
+<a href="../images/eagles/Ec1_チャンス突撃！.png" class="song-button">チャンス突撃！</a>
+<a href="../images/eagles/Ec2_ベニーランド.png" class="song-button">チャンステーマ（ベニーランド）</a>
+<a href="../images/eagles/Ec3_戦いのとき.png" class="song-button">チャンステーマ（戦いのとき）</a>
+<a href="../images/eagles/Ec4_レッツゴーわっしょい.png" class="song-button">チャンステーマ（レッツゴーわっしょい）</a>
+<a href="../images/eagles/Ec5_イモニレンジャー.png" class="song-button">チャンステーマ（イモニレンジャー）</a>
+<a href="../images/eagles/Ec6_関西限定.png" class="song-button">チャンステーマ（関西限定）</a>
+<a href="../images/eagles/Ec7_九州限定.png" class="song-button">チャンステーマ（九州限定）</a>
+<a href="../images/eagles/Ec8_フィーバー.png" class="song-button">フィーバーテーマ</a>
+
+<h2>退団選手等</h2>    
+<a href="../images/eagles/E04_阿部寿樹.png" class="song-button">阿部　寿樹</a>
+<a href="../images/eagles/E27_岡島豪郎.png" class="song-button">岡島　豪郎</a>
+<a href="../images/eagles/E34_山﨑剛.png" class="song-button">山﨑　剛　</a>
+<a href="../images/eagles/E35_島内宏明.png" class="song-button">島内　宏明</a>
+
+<h2>一括ダウンロード</h2>
+<a href="../images/eagles/eagles_all_songs.zip" class="download-button" target="_blank">一括ダウンロード</a>
+
+<!-- トップページに戻るボタン（中央揃え） -->
+<div style="text-align:center;">
+  <a href="../index.html" class="back-link">← トップページに戻る</a>
+</div>
+
+<!-- ===== モーダル本体 ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
+  <img class="modal-content" id="modalImg">
+  <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
+</div>
+
+<script>
+document.querySelectorAll('.song-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent; // ← ボタンの文字をタイトルに
+  });
+});
+
+// 閉じるボタン
+document.querySelector(".close").onclick = function() {
+  document.getElementById("imageModal").style.display = "none";
+};
+
+// 背景クリックで閉じる
+document.getElementById("imageModal").onclick = function(e) {
+  if (e.target === this) this.style.display = "none";
+};
+</script>
+
+</body>
+</html>

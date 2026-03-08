@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡ソフトバンクホークス</title>
+   
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFL20C2L2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFL20C2L2C');
+</script> 
+
+<!-- 共通CSS読み込み -->
+<link rel="stylesheet" href="../css/team-colors.css">
+
+<link rel="icon" href="../images/logos/softbank.png" type="image/x-icon">
+
+<style>
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  max-width: 800px;
+  margin: auto;
+  color: #000; /* デフォルト文字色は黒 */
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+  
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid var(--hawks-color);
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+/* YouTube埋め込み */
+iframe {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: none;
+}
+
+/* 応援歌ボタン（固定サイズ版） */
+.song-button, .download-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  min-width: 140px;
+  text-align: center;
+  background: var(--hawks-color); /* チームカラー */
+  color: var(--hawks-text);       /* ボタン文字色 */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.song-button:hover, .download-button:hover {
+  opacity: 0.85;
+}
+
+/* トップページに戻るボタン */
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 8px 12px;
+  background: #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+}
+.back-link:hover {
+  opacity: 0.85;
+}
+
+/* ===== モーダル表示用 ===== */
+.modal {
+  display: none;  /* 初期は非表示 */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* モーダル画像（128pxに拡大固定） */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+  width: 128px;
+  height: 128px;
+}
+
+/* 案内文 */
+.hint {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ccc;
+}
+</style>
+</head>
+<body>
+
+<h1>福岡ソフトバンクホークス</h1>
+
+<!-- ページ上部にYouTube埋め込み -->
+<iframe src="https://www.youtube.com/embed/G5JSVEcprOI" 
+        title="YouTube video" allowfullscreen></iframe>
+
+<h2>個人応援歌</h2>
+<a href="../images/softbank/H0_川瀬晃.png" class="song-button">０　川瀬　晃　</a>
+<a href="../images/softbank/H03_近藤健介.png" class="song-button">３　近藤　健介</a>
+<a href="../images/softbank/H04_ダウンズ.png" class="song-button">４　ダウンズ　</a>
+<a href="../images/softbank/H05_山川穂高.png" class="song-button">５　山川　穂高</a>
+<a href="../images/softbank/H06_今宮健太.png" class="song-button">６　今宮　健太</a>
+<a href="../images/softbank/H07_中村晃.png" class="song-button">７　中村　晃　</a>
+<a href="../images/softbank/H08_牧原大成.png" class="song-button">８　牧原　大成</a>
+<a href="../images/softbank/H09_柳田悠岐.png" class="song-button">９　柳田　悠岐</a>
+<a href="../images/softbank/H12_嶺井博希.png" class="song-button">12　嶺井　博希</a>
+<a href="../images/softbank/H23_周東佑京.png" class="song-button">23　周東　佑京</a>
+<a href="../images/softbank/H24_栗原陵矢.png" class="song-button">24　栗原　陵矢</a>
+<a href="../images/softbank/H31_正木智也.png" class="song-button">31　正木　智也</a>
+<a href="../images/softbank/H32_柳町達.png" class="song-button">32　柳町　達　</a>
+<a href="../images/softbank/H45_谷川原健太.png" class="song-button">45　谷川原健太</a>
+<a href="../images/softbank/H57_緒方理貢.png" class="song-button">57　緒方　理貢</a>
+<a href="../images/softbank/H62_海野隆司.png" class="song-button">62　海野　隆司</a>
+<a href="../images/softbank/H99_野村勇.png" class="song-button">99　野村　勇　</a>
+<a href="../images/softbank/H10_上沢直之.png" class="song-button">10　上沢　直之</a>
+<a href="../images/softbank/H11_津森宥紀.png" class="song-button">11　津森　宥紀</a>
+<a href="../images/softbank/H16_東浜巨.png" class="song-button">16　東浜　巨　</a>
+<a href="../images/softbank/H26_大津亮介.png" class="song-button">26　大津　亮介</a>
+<a href="../images/softbank/H39_尾形崇斗.png" class="song-button">39　尾形　崇斗</a>
+<a href="../images/softbank/H40_杉山一樹.png" class="song-button">40　杉山　一樹</a>
+<a href="../images/softbank/H47_大関友久.png" class="song-button">47　大関　友久</a>
+<a href="../images/softbank/H48_藤井晧哉.png" class="song-button">48　藤井　晧哉</a>
+<a href="../images/softbank/H49_松本晴.png" class="song-button">49　松本　晴　</a>
+<a href="../images/softbank/H53_大山凌.png" class="song-button">53　大山　凌　</a>
+<a href="../images/softbank/H66_松本裕樹.png" class="song-button">66　松本　裕樹</a>
+<a href="../images/softbank/H59_長谷川威展.png" class="song-button">120 長谷川威展</a>
+<a href="../images/softbank/H990_勝利目指して.png" class="song-button">勝利目指して</a>
+<a href="../images/softbank/H991_Ｈ右打者汎用.png" class="song-button">右打者汎用</a>
+<a href="../images/softbank/H992_Ｈ左打者汎用.png" class="song-button">左打者汎用</a>
+<a href="../images/softbank/H993_Ｈ外国人投手.png" class="song-button">外国人投手</a>
+
+<h2>チーム応援歌</h2>
+<a href="../images/softbank/Ht1_Ｈヒット.png" class="song-button">ヒット</a>
+<a href="../images/softbank/Ht2_ＨＨＲホーム.png" class="song-button">ホームラン</a>
+<a href="../images/softbank/Ht3_Ｈ得点ホーム.png" class="song-button">得点(ホーム)</a>
+<a href="../images/softbank/Ht4_Ｈ得点ビジタ.png" class="song-button">得点(ビジター)</a>
+<a href="../images/softbank/Hc1_Ｈチャンス１.png" class="song-button">チャンステーマ１</a>
+<a href="../images/softbank/Hc2_Ｈチャンス２.png" class="song-button">チャンステーマ２</a>
+<a href="../images/softbank/Hc3_Ｈチャンス３.png" class="song-button">チャンステーマ３</a>
+
+<h2>退団選手等</h2>
+<a href="../images/softbank/H14_又吉克樹.png" class="song-button">又吉　克樹</a>
+<a href="../images/softbank/H17_有原航平.png" class="song-button">有原　航平</a>
+<a href="../images/softbank/H18_武田翔太.png" class="song-button">武田　翔太</a>
+<a href="../images/softbank/H50_板東湧梧.png" class="song-button">板東　湧梧</a>
+<a href="../images/softbank/H56_田浦文丸.png" class="song-button">田浦　文丸</a>
+
+<h2>一括ダウンロード</h2>
+<a href="../images/softbank/softbank_all_songs.zip" class="download-button" target="_blank">一括ダウンロード</a>
+
+<!-- トップページに戻るボタン（中央揃え） -->
+<div style="text-align:center;">
+  <a href="../index.html" class="back-link">← トップページに戻る</a>
+</div>
+
+<!-- ===== モーダル本体 ===== -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <p id="modalTitle" class="title"></p>
+  <img class="modal-content" id="modalImg">
+  <p class="hint">PCは右クリック、モバイルは長押しで保存できます</p>
+</div>
+
+<script>
+document.querySelectorAll('.song-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+
+    modal.style.display = "flex";
+    modalImg.src = this.href;
+    modalTitle.textContent = this.textContent; // ← ボタンの文字をタイトルに
+  });
+});
+
+// 閉じるボタン
+document.querySelector(".close").onclick = function() {
+  document.getElementById("imageModal").style.display = "none";
+};
+
+// 背景クリックで閉じる
+document.getElementById("imageModal").onclick = function(e) {
+  if (e.target === this) this.style.display = "none";
+};
+</script>
+
+</body>
+</html>
