@@ -101,6 +101,14 @@ display:none;
 display:block;
 }
 
+body.prosupi{
+background:#eef5ff;
+}
+
+body.pawapuro{
+background:#fff4e8;
+}  
+  
 </style>
 </head>
 
@@ -260,7 +268,11 @@ buttons.forEach(b=>b.classList.remove("active"));
 
 document.getElementById(tabName).classList.add("active");
 
-document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add("active");
+event.target.classList.add("active");
+
+/* 背景変更 */
+document.body.classList.remove("prosupi","pawapuro");
+document.body.classList.add(tabName);
 
 }
 
@@ -268,6 +280,7 @@ document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add("activ
 
 </body>
 </html>
+
 
 
 
